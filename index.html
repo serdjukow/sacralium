@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SACRALIUM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="" class="header__logo">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item first">
+                  <a href="#about" class="menu__link">Об игре</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#world" class="menu__link">Мир</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#danji" class="menu__link">Данжи</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#cults" class="menu__link">Культы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#registration" class="menu__link">Форум</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <a href="#registration" class="header__button button-go">Вперед !</a>
+        </div>
+      </header>
+      <main class="page bg-black">
+        <section id="about" class="about">
+          <div class="layers">
+            <div
+              class="layer layers__base"
+              style="background-image: url(images/about-bg.png)"
+            >
+              <div></div>
+            </div>
+            <div class="layers__container">
+              <div class="layer__header">
+                <h1 class="layers__title title">
+                  ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG В ДУХЕ “БОЙЦОВСКОГО КЛУБА”
+                </h1>
+                <p class="layers__text text">
+                  Суровый мистический мир игры, сочетающий скандинавскую и
+                  старославянскую эстетику и мифологию, соткан из вибраций
+                  безвременного противостояния хтонических сил Тьмы, Света и
+                  Хаоса. Героям предстоит выбрать свою сторону в этой вечной
+                  битве.
+                </p>
+                <div class="layers__buttons">
+                  <button class="layers__button button-red">ВПЕРЕД !</button>
+                  <button class="layers__button button-gray">
+                    Подробности...
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="layer layers__middle"
+                style="background-image: url(images/character.png)"
+              ></div>
+            </div>
+          </div>
+        </section>
+        <section id="world" class="world bg-gray">
+          <div class="world__container">world</div>
+        </section>
+        <section id="danji" class="danji">
+          <div class="danji__container">danji</div>
+        </section>
+        <section id="cults" class="cults bg-gray">
+          <div class="cults__container">cults</div>
+        </section>
+        <section id="registration" class="registration">
+          <div class="registration__container">registration</div>
+        </section>
+      </main>
+      <footer class="footer bg-gray">
+        <div class="footer__container">
+          <small class="footer__text">
+            Copyright © Sacralium
+            <span class="text-blue">Games</span> 2023,
+            <span id="current-date"></span
+          ></small>
+          <a
+            class="footer__link text-blue"
+            href="mailto:business@sacralium.game"
+            >business@sacralium.game</a
+          >
+          <p class="footer__text">
+            Пресс-кит:<a class="footer__link text-blue" href="https://" download
+              >sacralium-presskit.zip</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
