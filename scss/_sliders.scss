@@ -1,0 +1,122 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.slider-media {
+  // .slider-media__wrapper
+
+  &__wrapper {
+  }
+
+  // .slider-media__slide
+
+  &__slide {
+  }
+
+  // .slider-media__bg
+
+  &__bg {
+    aspect-ratio: 372/209;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.about {
+  // .about__slider-text
+
+  &__slider-text {
+  }
+}
+.slider-text {
+  // .slider-text__slide
+
+  &__slide {
+  }
+
+  // .slider-text__content
+
+  &__content {
+    padding: 0 25px;
+  }
+
+  // .slider-text__title
+
+  &__title {
+  }
+
+  // .slider-text__text
+
+  &__text {
+  }
+}
+
+.swiper-slide {
+  will-change: transform;
+}
+
+.swiper-pagination {
+  position: relative;
+  height: calc(var(--index) * 3.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--index) * .7);
+  bottom: auto !important;
+  .swiper-pagination-bullet {
+    position: relative;
+    border: 2px solid #4d4743;
+    width: calc(var(--index) * .55);
+    height: calc(var(--index) * .55);
+    transform: rotate(-45deg);
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 0;
+    opacity: 1;
+    margin: 0 !important;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      inset: 2px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    border: 2px solid #f5e3b9;
+    &::before {
+      background-color: #f5e3b9;
+    }
+  }
+}

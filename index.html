@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SACRALIUM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js" defer></script>
+
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
@@ -12,7 +19,12 @@
       <header class="header">
         <div class="header__container">
           <a href="" class="header__logo">
-            <img src="images/logo.png" alt="Logo" />
+            <img
+              src="images/logo.png"
+              alt="SACRALIUM Site Logo"
+              width="203"
+              height="60"
+            />
           </a>
           <div class="header__menu menu">
             <nav class="menu__body">
@@ -35,15 +47,17 @@
               </ul>
             </nav>
           </div>
-          <a href="#registration" class="header__button button-go">Вперед !</a>
+          <a href="#registration" class="header__button button-go"
+            ><strong>ВПЕРЕД !</strong></a
+          >
         </div>
       </header>
       <main class="page bg-black">
-        <section id="about" class="about">
+        <section id="home" class="home">
           <div class="layers">
             <div
               class="layer layers__base"
-              style="background-image: url(images/about-bg.png)"
+              style="background-image: url(images/home-bg.png)"
             >
               <div></div>
             </div>
@@ -60,9 +74,11 @@
                   битве.
                 </p>
                 <div class="layers__buttons">
-                  <button class="layers__button button-red">ВПЕРЕД !</button>
+                  <button class="layers__button button-red">
+                    <strong>ВПЕРЕД !</strong>
+                  </button>
                   <button class="layers__button button-gray">
-                    Подробности...
+                    <strong>Подробности...</strong>
                   </button>
                 </div>
               </div>
@@ -74,36 +90,105 @@
             </div>
           </div>
         </section>
-        <section id="world" class="world bg-gray">
-          <div class="world__container">world</div>
+        <section id="about" class="about bg-gray">
+          <div class="about__container">
+            <div class="about__sliders">
+              <div class="about__slider-media slider-media swiper">
+                <div class="swiper-wrapper slider-media__wrapper">
+                  <div class="swiper-slide slider-media__slide">
+                    <div
+                      class="slider-media__bg bg-gray"
+                      style="background-image: url('images/about-slide.jpg')"
+                    ></div>
+                  </div>
+                  <div class="swiper-slide slider-media__slide">
+                    <div
+                      class="slider-media__bg bg-gray"
+                      style="background-image: url('images/home-bg.png')"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about__slider-text slider-text swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-text__slide">
+                    <div class="slider-text__content bg-gray">
+                      <h2 class="slider-text__title title">
+                        ГОРОДА И ПУТЕШЕСТВИЯ 1
+                      </h2>
+                      <p class="slider-text__text text">
+                        Путешествуйте из города в город, торгуйте, сражайтесь и
+                        выполняте квесты в генерируемых многоуровневых данжах,
+                        как в Roguelike играх, рассчитанных как на соло, так и
+                        на кооперативное групповое прохождение. Повышайте ваш
+                        уровень славы, чтобы получать задания и награды,
+                        достойные настоящего героя.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-text__slide">
+                    <div class="slider-text__content bg-gray">
+                      <h2 class="slider-text__title title">
+                        ГОРОДА И ПУТЕШЕСТВИЯ 2
+                      </h2>
+                      <p class="slider-text__text text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Voluptates odio a, vero dolorem, quod eos
+                        repudiandae quia quaerat sit quisquam dolor praesentium
+                        omnis. Eveniet temporibus ullam quos totam ab dicta!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Voluptates odio a, vero dolorem, quod eos
+                        repudiandae quia quaerat sit quisquam dolor praesentium
+                        omnis. Eveniet temporibus ullam quos totam ab dicta!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
+            </div>
+          </div>
+        </section>
+        <section id="world" class="world">
+          <div class="world__container"><h2 class="title">world</h2></div>
         </section>
         <section id="danji" class="danji">
-          <div class="danji__container">danji</div>
+          <div class="danji__container"><h2 class="title">danji</h2></div>
         </section>
         <section id="cults" class="cults bg-gray">
-          <div class="cults__container">cults</div>
+          <div class="cults__container"><h2 class="title">cults</h2></div>
         </section>
         <section id="registration" class="registration">
-          <div class="registration__container">registration</div>
+          <div class="registration__container">
+            <h2 class="title">registration</h2>
+          </div>
         </section>
       </main>
       <footer class="footer bg-gray">
         <div class="footer__container">
-          <small class="footer__text">
+          <span class="footer__text">
             Copyright © Sacralium
             <span class="text-blue">Games</span> 2023,
             <span id="current-date"></span
-          ></small>
+          ></span>
           <a
             class="footer__link text-blue"
             href="mailto:business@sacralium.game"
             >business@sacralium.game</a
           >
-          <p class="footer__text">
+          <span class="footer__text">
             Пресс-кит:<a class="footer__link text-blue" href="https://" download
               >sacralium-presskit.zip</a
             >
-          </p>
+          </span>
         </div>
       </footer>
     </div>

@@ -1,13 +1,27 @@
 // import { Swiper, Navigation, Pagination, Parallax, Autoplay } from "swiper";
 // Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
 
+const showHeader = () => {
+  const header = document.querySelector(".header");
+  header.classList.add("show");
+
+  setTimeout(() => {
+    header.classList.remove("show");
+  }, 3000);
+};
+
+const stikyHeader = () => {
+  const header = document.querySelector(".header");
+  window.scrollY >= 10
+    ? header.classList.add("sticky")
+    : header.classList.remove("sticky");
+};
+
 const headerSticky = () => {
   const header = document.querySelector(".header");
-  window.addEventListener("scroll", () =>
-    window.scrollY >= 10
-      ? header.classList.add("sticky")
-      : header.classList.remove("sticky")
-  );
+  window.addEventListener("scroll", () => {
+    // showHeader();
+  });
 };
 headerSticky();
 
@@ -103,7 +117,7 @@ window.addEventListener("scroll", (e) => {
   document.body.style.cssText += `--scrollTop: ${this.scrollY}px`;
 });
 
-// Активный пункт меню при загрузке страницы
+// Активный пункт меню при загрузке страницы 
 const activeSection = localStorage.getItem("activeSection");
 if (activeSection) {
   navLinks.forEach((link) => {
