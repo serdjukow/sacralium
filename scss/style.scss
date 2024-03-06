@@ -12,6 +12,8 @@
   --index: calc(1vw * 1.45);
   --font-family: "Calibri", sans-serif;
   --second-family: "Times New Roman", sans-serif;
+  --font-size: clamp(1.25rem, calc(1.06rem + 0.94vw), 2rem);
+  --paragraph-size: clamp(0.88rem, calc(0.72rem + 0.78vw), 1.5rem);
 }
 
 //------------------------------------------------------ //
@@ -91,10 +93,9 @@ section {
   position: relative;
   [class*="__container"] {
     position: relative;
-    max-width: 1390px;
-    max-width: calc(var(--index) * 58);
+    max-width: 1340px;
     margin: 0px auto;
-    padding: 0px 15px;
+    padding: 0px 50px;
   }
 }
 
@@ -102,8 +103,8 @@ section {
   text-transform: uppercase;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 32px;
-  font-size: calc(var(--index) * 1.38);
+  //font-size: calc(var(--index) * 1.38);
+  font-size: var(--font-size);
   line-height: 130%;
   letter-spacing: 0.03em;
   background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
@@ -116,7 +117,7 @@ section {
 .text {
   font-family: var(--font-family);
   font-weight: 300;
-  font-size: calc(var(--index) * 0.993);
+  font-size: var(--paragraph-size);
   text-align: justify;
   color: var(--text_color);
   margin-top: calc(var(--index) * 1.5);
@@ -150,15 +151,7 @@ section {
   border-radius: 7px;
   transition: opacity var(--elements_transition);
   strong {
-    font-family: var(--font-family);
-    font-weight: 400;
     font-size: calc(var(--index) * 1.095); // 26px
-    letter-spacing: 0.03em;
-    text-align: center;
-    background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   @media (any-hover: hover) {
     &:hover {
@@ -179,9 +172,20 @@ section {
   user-select: none;
   transition: opacity var(--elements_transition);
   strong {
+    font-size: calc(var(--index) * 1.1213);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+.button-go,
+.button-red,
+.button-gray {
+  strong {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: calc(var(--index) * 1.1213);
     letter-spacing: 0.03em;
     text-align: center;
     background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
@@ -190,12 +194,8 @@ section {
     -webkit-text-fill-color: transparent;
     opacity: 1;
   }
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: 0.6;
-    }
-  }
 }
+
 .button-red {
   background-image: url(../images/button_red.png);
 }
@@ -272,7 +272,7 @@ section {
   // .menu__list
   &__list {
     display: flex;
-    gap: 20px;
+    gap: clamp(1.25rem, calc(0.27rem + 2.04vw), 2.31rem);
   }
   // .menu__item
   &__item {
@@ -282,7 +282,7 @@ section {
   &__link {
     font-family: var(--font-family);
     font-weight: 300;
-    font-size: calc(var(--index) * 1.095); // 26px
+    font-size: clamp(1rem, calc(0.42rem + 1.2vw), 1.63rem);
     color: #d5d5d5;
     text-decoration: none;
     transition: color var(--elements_transition);
@@ -311,7 +311,7 @@ section {
   aspect-ratio: 16/9;
   &__container {
     height: 100%;
-    //min-height: 900px;
+    min-height: 80vh;
     overflow: hidden;
     z-index: 0;
   }
@@ -363,7 +363,7 @@ section {
     width: calc(var(--index) * 19.1);
     //transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
     aspect-ratio: 1115/2628;
-    bottom: calc(var(--index) * -13);
+    top: calc(var(--index) * 6);
     right: 0;
   }
 
@@ -387,14 +387,14 @@ section {
   transition: var(--transition);
   &__header {
     position: absolute;
-    top: 40%;
+    top: calc(var(--index) * 16);
     left: 0;
     z-index: 1;
     //transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
     transition: var(--transition);
     will-change: transform;
     font-weight: 900;
-    max-width: calc(var(--index) * 30);
+    max-width: 710px;
     padding: 0 calc(var(--index) * 1);
   }
 }
@@ -474,7 +474,7 @@ section {
 .world {
   background-image: url(../images/world-bg.png);
   background-size: cover;
-  background-position: 0 calc(var(--index) * 3);
+  background-position: center;
   background-repeat: no-repeat;
   padding: calc(var(--index) * 2.85) 0;
   // .world__container
@@ -539,4 +539,144 @@ section {
 
   &__text {
   }
+}
+
+.cults-block-bg {
+  position: relative;
+  background-image: url("./../images/cults-bg-bottom.png");
+  background-position: 0 100px;
+  background-repeat: no-repeat;
+  //background-color: #131313;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-image: url("./../images/cults-bg-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.cults {
+  padding-top: 50px;
+
+  // .cults__container
+  &__container {
+  }
+
+  // .cults__content
+
+  &__content {
+  }
+
+  // .cults__text
+
+  &__text {
+  }
+
+  // .cults__skills
+
+  &__skills {
+  }
+
+  // .cults__skill
+
+  &__skill {
+    height: 400px;
+  }
+}
+
+.skill {
+}
+.registration {
+  padding-top: 50px;
+  // .registration__container
+
+  &__container {
+  }
+
+  // .registration__items
+
+  &__items {
+    display: flex;
+    gap: 40px;
+  }
+
+  // .registration__item-left
+
+  &__item-left {
+  }
+
+  &__item-right {
+    aspect-ratio: 234/305;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 400px;
+  }
+
+  &__body {
+  }
+
+  // .registration__content
+
+  &__content {
+    margin-bottom: 90px;
+  }
+
+  // .registration__text
+
+  &__text {
+  }
+
+  // .registration__form
+
+  &__form {
+  }
+
+  // .registration__feld
+
+  &__feld {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .registration__button
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}
+.form-feld {
+  font-size: 30px;
+  display: flex;
+  gap: 50px;
+  label {
+    flex: 0 0 220px;
+  }
+  input {
+    flex: 1 1 100%;
+    appearance: none;
+    background-color: #cccaca;
+    cursor: pointer;
+    border-radius: 8px;
+    border-color: transparent;
+    font-size: 30px;
+    caret-color: #333;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #333;
+    }
+  }
+}
+
+.registration {
 }

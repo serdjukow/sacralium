@@ -14,6 +14,7 @@ const swiperText = new Swiper(".slider-text", {
     delay: 2500,
     disableOnInteraction: false,
   },
+  autoHeight: true,
 });
 
 const swiperMedia = new Swiper(".slider-media", {
