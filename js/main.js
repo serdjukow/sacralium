@@ -23,7 +23,7 @@ const headerSticky = () => {
     // showHeader();
   });
 };
-headerSticky();
+//headerSticky();
 
 // Получаем актуальный год в copiright
 const getCurrentYear = () => {
@@ -77,16 +77,16 @@ function goTo() {
 }
 goTo();
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".section");
 const navLinks = document.querySelectorAll(".menu__item a");
-const headerHeight = document.querySelector("header").offsetHeight;
+const headerHeight = document.querySelector(".navigation").offsetHeight;
 const baseTitle = document.title;
 let ticking = false;
 
 function highlightNavLink() {
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      let fromTop = window.scrollY + 10; // Дополнительное смещение, если нужно
+      let fromTop = window.scrollY; // Дополнительное смещение, если нужно
       sections.forEach((section) => {
         if (
           section.offsetTop <= fromTop &&
@@ -117,7 +117,7 @@ window.addEventListener("scroll", (e) => {
   document.body.style.cssText += `--scrollTop: ${this.scrollY}px`;
 });
 
-// Активный пункт меню при загрузке страницы 
+// Активный пункт меню при загрузке страницы
 const activeSection = localStorage.getItem("activeSection");
 if (activeSection) {
   navLinks.forEach((link) => {
@@ -128,3 +128,21 @@ if (activeSection) {
 }
 
 highlightNavLink();
+
+const toggleBurgerActive = () => {
+  const menuButton = document.querySelector("#nav-icon");
+  const body = document.querySelector("body");
+  const mobile_menu = document.querySelector(".mobile-menu");
+  
+  menuButton?.addEventListener("click", (event) => {
+    if (event.target.closest("#nav-icon")) {
+      toggleNavActive();
+    }
+  });
+  const toggleNavActive = () => {
+    menuButton.classList.toggle("_active");
+    body.classList.toggle("_lock");
+    mobile_menu.classList.toggle("_active");
+  };
+};
+toggleBurgerActive();

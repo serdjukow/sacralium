@@ -1,0 +1,330 @@
+:root {
+  --bg_black: #000;
+  --bg_gray: #0f0f0f;
+  --title_color: #9c9a98;
+  --text_color: #9c9a98;
+  --light-text: #fff;
+  --header_height: 70px;
+  --transition: transform 0.2s cubic-bezier(0.075, 0.5, 0, 1);
+  --elements_transition: 0.25s ease-in;
+  --index: calc(1vw * 1.45);
+  --font-family: "Calibri", sans-serif;
+  --second-family: "Times New Roman", sans-serif;
+  --font-size: clamp(1.25rem, calc(1.06rem + 0.94vw), 2rem);
+  --paragraph-size: clamp(0.88rem, calc(0.72rem + 0.78vw), 1.5rem);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+h1,
+h2 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-size: 16px;
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+section {
+  color: #fff;
+  [class*="__container"] {
+    position: relative;
+    margin: 0px auto;
+    padding: 20px 20px 0;
+    @media (min-width: 480px) {
+      padding: 30px 20px 0;
+    }
+    @media (min-width: 768px) {
+      padding: 50px 30px 0;
+    }
+    @media (min-width: 1024px) {
+      padding: 65px 50px 0;
+      max-width: 1340px;
+    }
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1600px) {
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: var(--second-family);
+  font-weight: 400;
+  //font-size: calc(var(--index) * 1.38);
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #9d822b;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 28px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 14px;
+  text-align: justify;
+  color: var(--text_color);
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 22px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.bg-black {
+  background-color: var(--bg_black);
+}
+
+.bg-gray {
+  background-color: var(--bg_gray);
+}
+
+.button-go {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #900302;
+  transition: opacity var(--elements_transition);
+  font-size: 14px;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  min-width: 80px;
+  border-radius: 4px;
+  padding: 5px 12px;
+  @media (min-width: 480px) {
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+    min-width: 150px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 26px;
+    min-width: 200px;
+  }
+  @media (min-width: 1200px) {
+    min-width: 234px;
+  }
+  @media (min-width: 1600px) {
+    padding: 12px 25px;
+  }
+}
+
+.button-red,
+.button-gray {
+  display: block;
+  aspect-ratio: 236/57;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  transition: opacity var(--elements_transition);
+  font-size: 20px;
+  width: 280px;
+  padding: 12px;
+  text-decoration: none;
+  @media (min-width: 480px) {
+    width: 236px;
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 26px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 26px;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+.button-go,
+.button-red,
+.button-gray {
+  font-family: var(--font-family);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: center;
+  strong {
+    background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    text-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5),
+      0 0 14px 0 rgba(254, 194, 81, 0.6), 0px 0px 0 0 #44090d;
+  }
+}
+
+.button-red {
+  background-image: url(../images/button_red.png);
+}
+.button-gray {
+  background-image: url(../images/button_gray.png);
+}
+
+.navigation {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 50;
+  transition: var(--elements_transition);
+  top: 20px;
+  padding: 0 20px;
+  @media (min-width: 768px) {
+    top: 30px;
+    padding: 0 30px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 50px;
+  }
+  @media (min-width: 1200px) {
+    top: 30px;
+  }
+  @media (min-width: 1600px) {
+    top: 95px;
+    padding: 0 35px;
+  }
+
+  // opacity: 0;
+  // user-select: none;
+  // visibility: hidden;
+  &.sticky {
+    padding: 0;
+    top: 0;
+  }
+  &.show {
+    opacity: 1;
+    user-select: auto;
+    visibility: visible;
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: rgba(29, 29, 29, 0.83);
+    padding: 12px 16px;
+    z-index: 50;
+    @media (min-width: 768px) {
+      padding: 25px 16px;
+    }
+    @media (min-width: 1024px) {
+      //max-width: 1340px;
+      padding: 22px 25px;
+    }
+    @media (min-width: 1600px) {
+      padding: 23px 32px;
+    }
+  }
+
+  // .navigation__body
+  &__body {
+    position: relative;
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  // .navigation__logo
+  &__logo {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 767.98px) {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (min-width: 768px) {
+      aspect-ratio: 29/6;
+      flex: 0 0 125px;
+      position: relative;
+    }
+    @media (min-width: 1024px) {
+      flex: 0 0 175px;
+    }
+    @media (min-width: 1200px) {
+      flex: 0 0 203px;
+    }
+  }
+  // .navigation__menu
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  &__button {
+  }
+}

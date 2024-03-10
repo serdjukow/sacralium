@@ -1,0 +1,85 @@
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+
+.header {
+  position: relative;
+  background-image: url(../images/home-bg.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  &__container {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    z-index: 0;
+    @media (min-width: 1200px) {
+      min-height: 750px;
+      max-height: 850px;
+      max-width: 1340px;
+    }
+    @media (min-width: 1600px) {
+      min-height: 800px;
+      max-height: 902px;
+    }
+  }
+  &__content {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    transition: var(--transition);
+    top: 40%;
+    left: 0;
+    z-index: 1;
+    //transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    //transition: var(--transition);
+    will-change: transform;
+    font-weight: 900;
+    max-width: 770px;
+    padding-left: 20px;
+    @media (min-width: 480px) {
+      padding-left: 20px;
+    }
+    @media (min-width: 768px) {
+      padding-left: 30px;
+    }
+    @media (min-width: 1024px) {
+      padding-left: 50px;
+    }
+  }
+  &__title {
+    margin-bottom: 46px;
+  }
+
+  &__fog {
+    position: absolute;
+    // transition: var(--transition);
+    //transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+    z-index: 0;
+  }
+
+  &__hero {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    width: 460px;
+    //transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+    //transition: var(--transition);
+    aspect-ratio: 1115/2628;
+    top: 13%;
+    right: 68px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+  }
+}

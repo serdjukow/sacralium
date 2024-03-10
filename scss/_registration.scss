@@ -1,0 +1,116 @@
+.registration {
+  position: relative;
+  z-index: 1;
+  // .registration__container
+
+  &__container {
+  }
+
+  &__figure {
+    position: absolute;
+    right: 28px;
+    bottom: 0;
+    aspect-ratio: 234/305;
+    width: 480px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    width: 740px;
+  }
+
+  // .registration__content
+
+  &__content {
+    margin-bottom: 112px;
+  }
+
+  &__title {
+  }
+
+  // .registration__text
+
+  &__text {
+  }
+
+  // .registration__form
+
+  &__form {
+    padding-bottom: 90px;
+  }
+}
+.form {
+  // .form__feld
+
+  &__feld {
+    font-family: var(--font-family);
+    font-size: 30px;
+    display: grid;
+    padding-right: 15px;
+    grid-template-columns: 210px 1fr;
+    gap: 37px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .form__button
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 63px;
+  }
+
+  label {
+  }
+  input {
+    appearance: none;
+    background-color: #cccaca;
+    cursor: pointer;
+    border-radius: 6px;
+    border-color: transparent;
+    font-size: 30px;
+    caret-color: #333;
+    padding: 4px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:focus {
+      outline: none;
+    }
+    &:-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder,
+    &::-webkit-input-placeholder,
+    &::placeholder {
+      font-size: 30px !important;
+      color: #333;
+      text-shadow: none;
+      -webkit-text-fill-color: #333;
+    }
+    &:autofill,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill::first-line {
+      border: inherit;
+      -webkit-text-fill-color: inherit;
+      -webkit-box-shadow: inherit;
+      font-size: inherit;
+      font-size: 30px !important;
+    }
+
+    &:-internal-autofill-previewed {
+      font-size: 30px !important;
+    }
+    &:valid {
+      font-size: 30px !important;
+    }
+  }
+}

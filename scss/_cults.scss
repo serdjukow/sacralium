@@ -1,0 +1,103 @@
+.cults {
+  position: relative;
+  background-image: url("./../images/cults-bg-bottom.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(#40403f, .5);
+  overflow: hidden;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-image: url("./../images/cults-bg-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .9;
+     z-index: 1;
+  }
+
+  // .cults__container
+  &__container {
+    z-index: 2;
+  }
+
+  // .cults__content
+
+  &__content {
+  }
+
+  &__title {
+  }
+
+  // .cults__text
+
+  &__text {
+  }
+
+  // .cults__skills
+
+  &__skills {
+    display: grid;
+    grid-template-columns: 410px 410px 410px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+  }
+
+  // .cults__skill
+
+  &__skill {
+    &:first-child {
+      margin-left: -20px;
+    }
+    &:last-child {
+      margin-right: -25px;
+    }
+  }
+}
+
+.skill {
+  width: 100%;
+  aspect-ratio: 345/359;
+  background-image: url(../images/skill-bg.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  user-select: none;
+  padding-top: 11%;
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5),
+      0 0 11px 0 rgba(254, 194, 81, 0.6), 0px 0px 0 0 #44090d;
+    margin-bottom: 8px;
+  }
+  &__subtitle {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  &__logo {
+    aspect-ratio: 1/1;
+    background-image: url(../images/skill-bg.png);
+    background-size: cover;
+    background-position: center;
+    width: 137px;
+    margin: 0 auto;
+  }
+}

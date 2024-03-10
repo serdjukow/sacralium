@@ -1,96 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
+    <meta name="robots" content="noindex" />  <!-- Dev mode -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SACRALIUM</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    />  
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/sliders.js" defer></script>
-
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/form.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body class="body">
     <div class="wrapper">
-      <header class="header">
-        <div class="header__container">
-          <a href="" class="header__logo">
-            <img
-              src="images/logo.png"
-              alt="SACRALIUM Site Logo"
-              width="203"
-              height="60"
-            />
-          </a>
-          <div class="header__menu menu">
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item first">
-                  <a href="#about" class="menu__link">Об игре</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#world" class="menu__link">Мир</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#danji" class="menu__link">Данжи</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#cults" class="menu__link">Культы</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#registration" class="menu__link">Форум</a>
-                </li>
-              </ul>
-            </nav>
+      <header class="header bg-gray">
+        <div class="header__mobile-menu mobile-menu">
+          <nav class="mobile-menu__body">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item first">
+                <a href="#about" class="mobile-menu__link">Об игре</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#world" class="mobile-menu__link">Мир</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#danji" class="mobile-menu__link">Данжи</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#cults" class="mobile-menu__link">Культы</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#registration" class="mobile-menu__link">Форум</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__navigation navigation">
+          <div class="navigation__wrapper">
+            <div class="navigation__body">
+              <div id="nav-icon" class="open">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <a href="/" class="navigation__logo" title="SACRALIUM">
+                <picture>
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="images/logo-mobile.png"
+                  />
+                  <img src="images/logo.png" alt="SACRALIUM Site Logo" />
+                </picture>
+              </a>
+              <div class="navigation__menu menu">
+                <nav class="menu__body">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a href="#about" class="menu__link">Об игре</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#world" class="menu__link">Мир</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#danji" class="menu__link">Данжи</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#cults" class="menu__link">Культы</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#registration" class="menu__link">Форум</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <a href="#registration" class="header__button button-go"
+                ><strong>ВПЕРЕД !</strong></a
+              >
+            </div>
           </div>
-          <a href="#registration" class="header__button button-go"
-            ><strong>ВПЕРЕД !</strong></a
-          >
+        </div>
+        <div id="home" class="section">
+          <div class="header__container">
+            <!-- <div class="header__fog fog">
+              <div></div>
+            </div> -->
+            <div class="header__content">
+              <h1 class="header__title title">
+                ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG В ДУХЕ “БОЙЦОВСКОГО КЛУБА”
+              </h1>
+              <p class="header_text text">
+                Суровый мистический мир игры, сочетающий скандинавскую и
+                старославянскую эстетику и мифологию, соткан из вибраций
+                безвременного противостояния хтонических сил Тьмы, Света и
+                Хаоса. Героям предстоит выбрать свою сторону в этой вечной
+                битве.
+              </p>
+              <div class="header__buttons">
+                <a href="##" class="header__button button-red">
+                  <strong>ВПЕРЕД !</strong>
+                </a>
+                <button class="header__button button-gray">
+                  <strong>Подробности...</strong>
+                </и>
+              </div>
+            </div>
+            <div
+              class="header__hero"
+              style="background-image: url(images/character.png)"
+            ></div>
+          </div>
         </div>
       </header>
       <main class="page bg-black">
-        <section id="home" class="home">
-          <div class="layers">
-            <div
-              class="layer layers__base"
-              style="background-image: url(images/home-bg.png)"
-            >
-              <div></div>
-            </div>
-            <div class="layers__container">
-              <div class="layer__header">
-                <h1 class="layers__title title">
-                  ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG В ДУХЕ “БОЙЦОВСКОГО КЛУБА”
-                </h1>
-                <p class="layers__text text">
-                  Суровый мистический мир игры, сочетающий скандинавскую и
-                  старославянскую эстетику и мифологию, соткан из вибраций
-                  безвременного противостояния хтонических сил Тьмы, Света и
-                  Хаоса. Героям предстоит выбрать свою сторону в этой вечной
-                  битве.
-                </p>
-                <div class="layers__buttons">
-                  <button class="layers__button button-red">
-                    <strong>ВПЕРЕД !</strong>
-                  </button>
-                  <button class="layers__button button-gray">
-                    <strong>Подробности...</strong>
-                  </button>
-                </div>
-              </div>
-
-              <div
-                class="layer layers__middle"
-                style="background-image: url(images/character.png)"
-              ></div>
-            </div>
-          </div>
-        </section>
-        <section id="about" class="about bg-gray">
+        <section id="about" class="about bg-gray section">
           <div class="about__container">
             <div class="about__sliders">
               <div class="about__slider-media slider-media swiper">
@@ -112,10 +141,10 @@
 
               <div class="about__slider-text slider-text swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide slider-text__slide">
-                    <div class="slider-text__content bg-gray">
+                  <div class="swiper-slide slider-text__slide bg-gray">
+                    <div class="slider-text__content">
                       <h2 class="slider-text__title title">
-                        ГОРОДА И ПУТЕШЕСТВИЯ 1
+                        ГОРОДА И ПУТЕШЕСТВИЯ
                       </h2>
                       <p class="slider-text__text text">
                         Путешествуйте из города в город, торгуйте, сражайтесь и
@@ -123,27 +152,23 @@
                         как в Roguelike играх, рассчитанных как на соло, так и
                         на кооперативное групповое прохождение.
                       </p>
-                      <p class="text">
+                      <!-- <p class="text">
                         Повышайте ваш уровень славы, чтобы получать задания и
                         награды, достойные настоящего героя.
-                      </p>
+                      </p> -->
                     </div>
                   </div>
 
-                  <div class="swiper-slide slider-text__slide">
-                    <div class="slider-text__content bg-gray">
+                  <div class="swiper-slide slider-text__slide  bg-gray">
+                    <div class="slider-text__content">
                       <h2 class="slider-text__title title">
-                        ГОРОДА И ПУТЕШЕСТВИЯ 2
+                        ГОРОДА И ПУТЕШЕСТВИЯ
                       </h2>
                       <p class="slider-text__text text">
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Voluptates odio a, vero dolorem, quod eos
                         repudiandae quia quaerat sit quisquam dolor praesentium
-                        omnis. Eveniet temporibus ullam quos totam ab dicta!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptates odio a, vero dolorem, quod eos
-                        repudiandae quia quaerat sit quisquam dolor praesentium
-                        omnis. Eveniet temporibus ullam quos totam ab dicta!
+                        omnis.
                       </p>
                     </div>
                   </div>
@@ -153,18 +178,18 @@
             <div class="swiper-pagination"></div>
           </div>
         </section>
-        <section id="world" class="world">
+        <section id="world" class="world section">
           <div class="world__container">
             <div class="world__content">
-              <h2 class="title">МИР ИГРЫ</h2>
-              <p class="text">
+              <h2 class="world__title title">МИР ИГРЫ</h2>
+              <p class="world__text text">
                 Есть легенда, что твердь в мире Ваальбора возникла, когда Огун,
                 верховный бог света, вонзил свой меч в бескрайнюю Бездну. И
                 возник на том месте Железный Лес. А меч до сих пор торчит из
                 земли в том лесу, среди прочих клинков. И герой, что найдет его,
                 получит великую силу. Но это не точно.
               </p>
-              <p class="text">
+              <p class="world__text text">
                 Путешествуйте по городам и храмам, выполняйте квесты в опасных
                 таинственных подземельях и снищите славу величайшего Героя
                 Ваальбора!
@@ -173,7 +198,7 @@
             <div class="world__map"></div>
           </div>
         </section>
-        <section id="danji" class="danji">
+        <section id="danji" class="danji section">
           <div class="danji__container">
             <div class="danji__img"></div>
             <div class="danji__content">
@@ -196,73 +221,105 @@
             </div>
           </div>
         </section>
-        <div class="cults-block-bg">
-          <section id="cults" class="cults">
-            <div class="cults__container">
-              <div class="cults__content">
-                <h2 class="title">КУЛЬТЫ И PvP</h2>
-                <p class="cults__text text">
-                  Боги Света, Тьмы и Хаоса призывают в мир Ваальбора лучших
-                  бойцов, погибших в схватках в низших мирах и даруют им
-                  бессмертие. Погибшие здесь воины вновь возрождаются в
-                  Ваальборе. Но взамен боги требуют, чтобы бойцы сражались за
-                  них в священных поединках и приносили им кровавые жертвы в
-                  виде скальпов адептов других культов. Поединки проходят как
-                  один на один, так и отряд на отряд, до нескольких сотен воинов
-                  в бою. Однако, богам этого мира не важно, случилося поединок
-                  на арене у Божьего Камня их культа, или герои сошлись в темной
-                  подворотне. Главное - победа!
-                </p>
-              </div>
-              <div class="cults__skills">
-                <div class="cults__skill skill"></div>
-              </div>
+        <section id="cults" class="cults section">
+          <div class="cults__container">
+            <div class="cults__content">
+              <h2 class="cults__title title">КУЛЬТЫ И PvP</h2>
+              <p class="cults__text text">
+                Боги Света, Тьмы и Хаоса призывают в мир Ваальбора лучших
+                бойцов, погибших в схватках в низших мирах и даруют им
+                бессмертие. Погибшие здесь воины вновь возрождаются в Ваальборе.
+                Но взамен боги требуют, чтобы бойцы сражались за них в священных
+                поединках и приносили им кровавые жертвы в виде скальпов адептов
+                других культов. Поединки проходят как один на один, так и отряд
+                на отряд, до нескольких сотен воинов в бою. Однако, богам этого
+                мира не важно, случилося поединок на арене у Божьего Камня их
+                культа, или герои сошлись в темной подворотне. Главное - победа!
+              </p>
             </div>
-          </section>
-          <section id="registration" class="registration">
-            <div class="registration__container">
-              <div class="registration__items">
-                <div class="registration__item-left">
-                  <div class="registration__body">
-                    <div class="registration__content">
-                      <h2 class="title">ПРЕДВАРИТЕЛЬНАЯ РЕГИСТРАЦИЯ</h2>
-                      <p class="registration__text text">
-                        Станьте одним из первых героев в мире Ваальбора ! Игра
-                        еще находится в разработке, но если вы оставите ваш
-                        e-mail - мы напишем, когда она выйдет в открытый доступ
-                        или пригласим на закрытое тестирование. Прямо сейчас -
-                        регистрация позволяет писать сообщения на форуме и
-                        забронировать имя персонажа. Герои, зарегистрировавшиеся
-                        заранее, получат при открытии игры гарантированный
-                        бонус.
-                      </p>
-                    </div>
-
-                    <form class="registration__form">
-                      <div class="registration__feld form-feld">
-                        <label for="e-mail">E-Mail</label>
-                        <input type="email" name="e-mail" id="e-mail" />
-                      </div>
-                      <div class="registration__feld form-feld">
-                        <label for="name">Имя персонажа</label>
-                        <input type="email" name="name" id="name" />
-                      </div>
-                      <div class="registration__button">
-                        <button class="button-red">
-                          <strong>ОТПРАВИТЬ</strong>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            <div class="cults__skills">
+              <div class="cults__skill skill">
+                <h5 class="skill__title">СВЕТ</h5>
+                <div class="skill__subtitle">Сила, Иерархия, Честь</div>
                 <div
-                  class="registration__item-right"
-                  style="background-image: url('images/register-img_x2.png')"
+                  class="skill__logo"
+                  style="background-image: url(../images/light.png)"
+                ></div>
+              </div>
+              <div class="cults__skill skill">
+                <h5 class="skill__title">ТЬМА</h5>
+                <div class="skill__subtitle">Интеллект, Контроль</div>
+                <div
+                  class="skill__logo"
+                  style="background-image: url(../images/darkness.png)"
+                ></div>
+              </div>
+              <div class="cults__skill skill">
+                <h5 class="skill__title">ХАОС</h5>
+                <div class="skill__subtitle">Интуиция, Свобода</div>
+                <div
+                  class="skill__logo"
+                  style="background-image: url(../images/chaos.png)"
                 ></div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+          <div id="registration" class="registration">
+            <div class="registration__container">
+              <div class="registration__body">
+                <div class="registration__content">
+                  <h2 class="registration__title title">ПРЕДВАРИТЕЛЬНАЯ РЕГИСТРАЦИЯ</h2>
+                  <p class="registration__text text">
+                    Станьте одним из первых героев в мире Ваальбора ! Игра еще
+                    находится в разработке, но если вы оставите ваш e-mail - мы
+                    напишем, когда она выйдет в открытый доступ или пригласим на
+                    закрытое тестирование. Прямо сейчас - регистрация позволяет
+                    писать сообщения на форуме и забронировать имя персонажа.
+                    Герои, зарегистрировавшиеся заранее, получат при открытии
+                    игры гарантированный бонус.
+                  </p>
+                </div>
+
+                <form id="form" class="registration__form form">
+                  <div class="form__feld">
+                    <label for="e-mail">E-Mail</label>
+                    <input
+                      type="email"
+                      name="e-mail"
+                      id="e-mail"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="form__feld">
+                    <label for="name">Имя персонажа</label>
+                    <input
+                      type="name"
+                      name="name"
+                      id="name"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="form__button">
+                    <button class="button-red">
+                      <strong>ОТПРАВИТЬ</strong>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="registration__figure">
+                <picture>
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="images/register-img_x2.png"
+                  />
+                  <img src="images/register-img_x2.png" alt="SACRALIUM Site Logo" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer bg-gray">
         <div class="footer__container">

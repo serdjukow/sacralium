@@ -1,0 +1,41 @@
+.danji {
+  background: linear-gradient(180deg, #131313 0%, #050505 100%);
+  padding-bottom: 100px;
+  // .danji__container
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  // .danji__img
+
+  &__img {
+    position: absolute;
+    top: -90px;
+    left: 64px;
+    aspect-ratio: 273/356;
+    background-image: url(../images/danji.png);
+    background-size: cover;
+    background-position: center;
+    width: 546px;
+     z-index: 1;
+  }
+
+  // .danji__content
+
+  &__content {
+    flex: 0 0 700px;
+  }
+
+  // .danji__title
+
+  &__title {
+  }
+
+  // .danji__text
+
+  &__text {
+  }
+}

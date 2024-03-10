@@ -1,0 +1,35 @@
+.world {
+  background-image: url(../images/world-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   padding-bottom: 95px;
+  // .world__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 790px;
+    gap: 20px;
+    padding-right: 15px !important;
+  }
+
+  // .world__content
+
+  &__content {
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  // .world__map
+
+  &__map {
+    aspect-ratio: 8/5;
+    background-image: url(../images/world-map.png);
+    background-size: cover;
+    background-position: center;
+  }
+}
