@@ -1,10 +1,21 @@
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1600px) {
+}
 .cults {
   position: relative;
   background-image: url("./../images/cults-bg-bottom.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(#40403f, .5);
+  background-color: rgba(#050505, 1);
+  //background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
   overflow: hidden;
   z-index: 0;
   &::before {
@@ -13,13 +24,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 80%;
     background-image: url("./../images/cults-bg-top.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: .9;
-     z-index: 1;
+    opacity: 0.9;
+    z-index: 1;
   }
 
   // .cults__container
@@ -43,61 +54,113 @@
   // .cults__skills
 
   &__skills {
-    display: grid;
-    grid-template-columns: 410px 410px 410px;
-    justify-content: space-between;
+    display: flex;
+    grid-template-columns: repeat(3, 410px);
+    justify-content: center;
     width: 100%;
     gap: 10px;
+    @media (min-width: 480px) {
+    }
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+      gap: 14px;
+    }
+    @media (min-width: 1200px) {
+      gap: 42px;
+    }
+    @media (min-width: 1600px) {
+      gap: 60px;
+    }
   }
 
   // .cults__skill
 
   &__skill {
-    &:first-child {
-      margin-left: -20px;
+    @media (min-width: 480px) {
     }
-    &:last-child {
-      margin-right: -25px;
+    @media (min-width: 768px) {
+      flex: 0 0 229px;
+    }
+    @media (min-width: 1024px) {
+      flex: 0 0 299px;
+    }
+    @media (min-width: 1200px) {
+      flex: 0 0 339px;
+    }
+    @media (min-width: 1600px) {
+      flex: 0 0 375px;
     }
   }
 }
 
 .skill {
-  width: 100%;
-  aspect-ratio: 345/359;
-  background-image: url(../images/skill-bg.png);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  user-select: none;
-  padding-top: 11%;
+  display: block;
+  filter: drop-shadow(12px 14px 14px rgba(0, 0, 0, 0.9));
+  &__wrapper {
+    aspect-ratio: 345/359;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(135, 4, 4, 0.315);
+    clip-path: polygon(50% 0%, 100% 0, 100% 70%, 50% 100%, 0% 70%, 0 0);
+    text-align: center;
+    user-select: none;
+    padding-top: 11%;
+  }
   &__title {
     font-family: var(--second-family);
+    font-size: 24px;
     font-weight: 400;
-    font-size: 30px;
     line-height: 130%;
     letter-spacing: 0.03em;
     background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5),
-      0 0 11px 0 rgba(254, 194, 81, 0.6), 0px 0px 0 0 #44090d;
-    margin-bottom: 8px;
+    text-shadow: 0 0 15px #9d822b;
+    margin-bottom: 2.5%;
+    @media (min-width: 480px) {
+      font-size: 16px;
+    }
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 28px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 30px;
+    }
+    @media (min-width: 1600px) {
+    }
   }
   &__subtitle {
     font-family: var(--font-family);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
+    @media (min-width: 480px) {
+      font-size: 12px;
+    }
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 22px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1600px) {
+    }
   }
   &__logo {
     aspect-ratio: 1/1;
     background-image: url(../images/skill-bg.png);
     background-size: cover;
     background-position: center;
-    width: 137px;
+    width: 35%;
     margin: 0 auto;
   }
 }

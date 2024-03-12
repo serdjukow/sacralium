@@ -2,7 +2,7 @@
 // Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
 
 const showHeader = () => {
-  const header = document.querySelector(".header");
+  const header = document.querySelector(".navigation");
   header.classList.add("show");
 
   setTimeout(() => {
@@ -11,19 +11,19 @@ const showHeader = () => {
 };
 
 const stikyHeader = () => {
-  const header = document.querySelector(".header");
+  const header = document.querySelector(".navigation");
   window.scrollY >= 10
     ? header.classList.add("sticky")
     : header.classList.remove("sticky");
 };
 
 const headerSticky = () => {
-  const header = document.querySelector(".header");
   window.addEventListener("scroll", () => {
-    // showHeader();
+    stikyHeader();
+    showHeader()
   });
 };
-//headerSticky();
+headerSticky();
 
 // Получаем актуальный год в copiright
 const getCurrentYear = () => {
@@ -133,7 +133,7 @@ const toggleBurgerActive = () => {
   const menuButton = document.querySelector("#nav-icon");
   const body = document.querySelector("body");
   const mobile_menu = document.querySelector(".mobile-menu");
-  
+
   menuButton?.addEventListener("click", (event) => {
     if (event.target.closest("#nav-icon")) {
       toggleNavActive();

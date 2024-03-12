@@ -8,13 +8,34 @@
 
   &__sliders {
     display: flex;
-    gap: 24px;
+    flex-direction: column-reverse;
+    gap: 20px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    @media (min-width: 1200px) {
+      gap: 24px;
+    }
   }
 
   // .about__slider-media
 
   &__slider-media {
-    flex: 0 0 740px;
+    flex: 0 0 100%;
+    @media (min-width: 480px) {
+    }
+    @media (min-width: 768px) {
+      flex: 0 0 354px;
+    }
+    @media (min-width: 1024px) {
+      flex: 0 0 497px;
+    }
+    @media (min-width: 1200px) {
+      flex: 0 0 627px;
+    }
+    @media (min-width: 1600px) {
+      flex: 0 0 740px;
+    }
   }
 }
 
@@ -41,10 +62,13 @@
   // .slider-media__bg
 
   &__bg {
-    aspect-ratio: 372/209;
+    aspect-ratio: 3/2;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (min-width: 1600px) {
+      aspect-ratio: 372/209;
+    }
   }
 }
 
@@ -57,51 +81,51 @@
   // .slider-text__content
 
   &__content {
-    padding: 0 20px;
-  }
-
-  // .slider-text__title
-
-  &__title {
-  }
-
-  // .slider-text__text
-
-  &__text {
+    min-height: auto;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 768px) {
+      min-height: 228px;
+      padding-left: 20px;
+    }
+    @media (min-width: 1024px) {
+      min-height: 320px;
+    }
+    @media (min-width: 1200px) {
+      min-height: 418px;
+    }
   }
 }
 
 .swiper-pagination {
   position: relative;
-  height: calc(var(--index) * 3.1);
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: calc(var(--index) * 0.7);
+  gap: 7px;
+  padding: 24px 0 20px 0;
   bottom: auto !important;
   z-index: 0;
+  @media (min-width: 768px) {
+    padding: 24px 0 30px 0;
+  }
+
   .swiper-pagination-bullet {
     position: relative;
-    border: calc(var(--index) * 0.09) solid #4d4743;
-    width: calc(var(--index) * 0.55);
-    height: calc(var(--index) * 0.55);
-    transform: rotate(-45deg);
+    width: 19px;
+    height: 19px;
     display: inline-block;
     background-color: transparent;
     border-radius: 0;
     opacity: 1;
     margin: 0 !important;
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: transparent;
-      inset: calc(var(--index) * 0.09);
-    }
+    background-image: url(../images/swiper-pagination.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .swiper-pagination-bullet-active {
-    border-color: #f5e3b9;
-    &::before {
-      background-color: #f5e3b9;
-    }
+    background-image: url(../images/swiper-pagination-active.svg);
   }
 }
