@@ -5,12 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SACRALIUM</title>
+    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x2.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x1.5.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/character.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/home-bg.webp" type="image/webp">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />  
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="js/sliders.js" defer></script>
     <script src="js/form.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -54,9 +58,9 @@
                 <picture>
                   <source
                     media="(max-width: 767.98px)"
-                    srcset="images/logo-mobile.png"
+                    srcset="images/logo-mobile.webp"
                   />
-                  <img src="images/logo.png" alt="SACRALIUM Site Logo" />
+                  <img src="images/logo.webp" alt="SACRALIUM Site Logo" />
                 </picture>
               </a>
               <div class="navigation__menu menu">
@@ -88,9 +92,9 @@
         </div>
         <div id="home" class="section">
           <div class="header__container">
-            <div class="header__fog fog">
+            <!-- <div class="header__fog fog">
               <div></div>
-            </div>
+            </div> -->
             <div class="header__content">
               <h1 class="header__title title">
                 ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG В ДУХЕ “БОЙЦОВСКОГО КЛУБА”
@@ -119,9 +123,9 @@
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset="images/character.x1.5.png"
+                  srcset="images/character.x1.5.webp"
                 />
-              <img src="images/character.png" alt="ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG" loading="lazy"/>
+              <img src="images/character.webp" alt="ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG" loading="lazy"/>
             </picture>
           </div>
           </div>
@@ -138,13 +142,13 @@
                     <picture>
                       <source
                         media="(min-width: 1200px)"
-                        srcset="images/about-slide.x2.png"
+                        srcset="images/about-slide.x2.webp"
                       />
                       <source
                         media="(min-width: 768px)"
-                        srcset="images/about-slide.x1.5.png"
+                        srcset="images/about-slide.x1.5.webp"
                       />
-                    <img src="images/about-slide.jpg" alt="Персонаж" loading="lazy"/>
+                    <img src="images/about-slide.webp" alt="Персонаж" loading="lazy"/>
                   </picture>
                   </div>
                   </div>
@@ -153,13 +157,13 @@
                      <picture>
                       <source
                         media="(min-width: 1200px)"
-                        srcset="images/about-slide.x2.png"
+                        srcset="images/about-slide.x2.webp"
                       />
                       <source
                         media="(min-width: 768px)"
-                        srcset="images/about-slide.x1.5.png"
+                        srcset="images/about-slide.x1.5.webp"
                       />
-                      <img src="images/about-slide.jpg" alt="Персонаж" loading="lazy"/>
+                      <img src="images/about-slide.webp" alt="Персонаж" loading="lazy"/>
                     </picture>
                     </div>
                   </div>
@@ -226,13 +230,13 @@
                 <picture>
                   <source
                     media="(min-width: 1200px)"
-                    srcset="images/world-map.x2.png"
+                    srcset="images/world-map.x2.webp"
                   />
                   <source
                     media="(min-width: 768px)"
-                    srcset="images/world-map.x1.5.png"
+                    srcset="images/world-map.x1.5.webp"
                   />
-                  <img src="images/world-map.png" alt="МИР ИГРЫ" loading="lazy"/>
+                  <img src="images/world-map.webp" alt="МИР ИГРЫ" loading="lazy"/>
                 </picture>
             </div>
           </div>
@@ -243,13 +247,13 @@
                 <picture>
                   <source
                     media="(min-width: 1200px)"
-                    srcset="images/danji.x2.png"
+                    srcset="images/danji.x2.webp"
                   />
                   <source
                     media="(min-width: 768px)"
-                    srcset="images/danji.x1.5.png"
+                    srcset="images/danji.x1.5.webp"
                   />
-                  <img src="images/danji.png" alt="ДАНЖИ И БОССЫ" loading="lazy"/>
+                  <img src="images/danji.webp" alt="ДАНЖИ И БОССЫ" loading="lazy"/>
                 </picture>
             </div>
             <div class="danji__content">
@@ -295,7 +299,7 @@
                 <div class="skill__subtitle">Сила, Иерархия, Честь</div>
                 <div
                   class="skill__logo"
-                  style="background-image: url(../images/light.png)"
+                  style="background-image: url(../images/light.webp)"
                 ></div>
               </div>
               </figure>
@@ -305,7 +309,7 @@
                 <div class="skill__subtitle">Интеллект, Контроль</div>
                 <div
                   class="skill__logo"
-                  style="background-image: url(../images/darkness.png)"
+                  style="background-image: url(../images/darkness.webp)"
                 ></div>
               </div>
                </figure>
@@ -315,7 +319,7 @@
                 <div class="skill__subtitle">Интуиция, Свобода</div>
                 <div
                   class="skill__logo"
-                  style="background-image: url(../images/chaos.png)"
+                  style="background-image: url(../images/chaos.webp)"
                 ></div>
                  </div>
               </figure>
@@ -369,13 +373,13 @@
                 <picture>
                   <source
                     media="(min-width: 1200px)"
-                    srcset="images/register-img_x2.png"
+                    srcset="images/register-img_x2.webp"
                   />
                   <source
                     media="(min-width: 768px)"
-                    srcset="images/register-img_x1.5.png"
+                    srcset="images/register-img_x1.5.webp"
                   />
-                  <img src="images/register-img.png" alt="Персонаж" loading="lazy"/>
+                  <img src="images/register-img.webp" alt="Персонаж" loading="lazy"/>
                 </picture>
               </div>
             </div>
