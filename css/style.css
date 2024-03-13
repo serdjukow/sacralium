@@ -771,13 +771,17 @@ section [class*=__container] {
 }
 .header__hero {
   position: absolute;
-  background-size: cover;
-  background-position: center;
   will-change: transform;
   aspect-ratio: 1115/2628;
   top: 20px;
   right: 50%;
   width: 250px;
+}
+.header__hero img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 479.98px) {
   .header__hero {
@@ -978,9 +982,12 @@ section [class*=__container] {
 
 .slider-media__bg {
   aspect-ratio: 3/2;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+.slider-media__bg img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1600px) {
   .slider-media__bg {
@@ -1319,11 +1326,14 @@ section [class*=__container] {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   aspect-ratio: 273/356;
-  background-image: url(../images/danji.png);
-  background-size: cover;
-  background-position: center;
   z-index: 1;
   width: 234px;
+}
+.danji__img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 480px) {
   .danji__img {

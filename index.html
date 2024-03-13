@@ -88,9 +88,9 @@
         </div>
         <div id="home" class="section">
           <div class="header__container">
-            <!-- <div class="header__fog fog">
+            <div class="header__fog fog">
               <div></div>
-            </div> -->
+            </div>
             <div class="header__content">
               <h1 class="header__title title">
                 ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG В ДУХЕ “БОЙЦОВСКОГО КЛУБА”
@@ -111,10 +111,19 @@
                 </и>
               </div>
             </div>
-            <div
-              class="header__hero"
-              style="background-image: url(images/character.png)"
-            ></div>
+            <div class="header__hero">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="images/character.x2.webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="images/character.x1.5.png"
+                />
+              <img src="images/character.png" alt="ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG" loading="lazy"/>
+            </picture>
+          </div>
           </div>
         </div>
       </header>
@@ -125,16 +134,34 @@
               <div class="about__slider-media slider-media swiper">
                 <div class="swiper-wrapper slider-media__wrapper">
                   <div class="swiper-slide slider-media__slide">
-                    <div
-                      class="slider-media__bg bg-gray"
-                      style="background-image: url('images/about-slide.jpg')"
-                    ></div>
+                    <div class="slider-media__bg bg-gray">
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="images/about-slide.x2.png"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="images/about-slide.x1.5.png"
+                      />
+                    <img src="images/about-slide.jpg" alt="Персонаж" loading="lazy"/>
+                  </picture>
+                  </div>
                   </div>
                   <div class="swiper-slide slider-media__slide">
-                    <div
-                      class="slider-media__bg bg-gray"
-                      style="background-image: url('images/home-bg.png')"
-                    ></div>
+                    <div class="slider-media__bg bg-gray">
+                     <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="images/about-slide.x2.png"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="images/about-slide.x1.5.png"
+                      />
+                      <img src="images/about-slide.jpg" alt="Персонаж" loading="lazy"/>
+                    </picture>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -195,12 +222,36 @@
                 Ваальбора!
               </p>
             </div>
-            <div class="world__map"></div>
+            <div class="world__map">
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="images/world-map.x2.png"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="images/world-map.x1.5.png"
+                  />
+                  <img src="images/world-map.png" alt="МИР ИГРЫ" loading="lazy"/>
+                </picture>
+            </div>
           </div>
         </section>
         <section id="danji" class="danji section">
           <div class="danji__container">
-            <div class="danji__img"></div>
+            <div class="danji__img">
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="images/danji.x2.png"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="images/danji.x1.5.png"
+                  />
+                  <img src="images/danji.png" alt="ДАНЖИ И БОССЫ" loading="lazy"/>
+                </picture>
+            </div>
             <div class="danji__content">
               <h2 class="danji__title title">ДАНЖИ И БОССЫ</h2>
               <p class="danji__text text">
@@ -317,10 +368,14 @@
               <div class="registration__figure">
                 <picture>
                   <source
-                    media="(max-width: 767.98px)"
+                    media="(min-width: 1200px)"
                     srcset="images/register-img_x2.png"
                   />
-                  <img src="images/register-img_x2.png" alt="SACRALIUM Site Logo" />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="images/register-img_x1.5.png"
+                  />
+                  <img src="images/register-img.png" alt="Персонаж" loading="lazy"/>
                 </picture>
               </div>
             </div>

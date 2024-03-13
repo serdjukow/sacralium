@@ -63,9 +63,11 @@
 
   &__bg {
     aspect-ratio: 3/2;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
     @media (min-width: 1600px) {
       aspect-ratio: 372/209;
     }

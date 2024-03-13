@@ -24,11 +24,13 @@
     left: 50%;
     transform: translate(-50%);
     aspect-ratio: 273/356;
-    background-image: url(../images/danji.png);
-    background-size: cover;
-    background-position: center;
     z-index: 1;
     width: 234px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
     @media (min-width: 480px) {
       width: 314px;
     }
