@@ -48,6 +48,10 @@
       min-height: 800px;
       max-height: 902px;
     }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
+    }
   }
   &__content {
     position: absolute;
@@ -87,6 +91,10 @@
     @media (min-width: 1600px) {
       max-width: 770px;
       top: 40%;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
   &__title {
@@ -141,6 +149,10 @@
       right: 68px;
       width: 460px;
     }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
+    }
   }
 
   &__buttons {
@@ -163,6 +175,10 @@
       flex-direction: row;
       margin-top: 50px;
       gap: 40px;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
 }

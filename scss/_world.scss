@@ -8,6 +8,10 @@
 }
 @media (min-width: 1600px) {
 }
+@media (min-width: 1920px) {
+}
+@media (min-width: 3840px) {
+}
 
 .world {
   background-image: url(../images/world-bg.webp);
@@ -29,6 +33,10 @@
   @media (min-width: 1600px) {
     padding-bottom: 95px;
   }
+  @media (min-width: 1920px) {
+  }
+  @media (min-width: 3840px) {
+  }
   // .world__container
 
   &__container {
@@ -49,6 +57,10 @@
     }
     @media (min-width: 1600px) {
       grid-template-columns: 1fr 790px;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
 
@@ -79,6 +91,10 @@
     }
     @media (min-width: 1024px) {
       max-width: 100%;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
 }

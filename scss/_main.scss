@@ -112,6 +112,10 @@ section {
     font-size: 32px;
     margin-bottom: 32px;
   }
+  @media (min-width: 1920px) {
+  }
+  @media (min-width: 3840px) {
+  }
 }
 
 .text {
@@ -121,6 +125,7 @@ section {
   text-align: justify;
   color: var(--text_color);
   margin-bottom: 16px;
+  text-align: left;
   @media (min-width: 768px) {
     font-size: 16px;
     margin-bottom: 20px;
@@ -132,6 +137,10 @@ section {
   @media (min-width: 1200px) {
     font-size: 24px;
     margin-bottom: 30px;
+  }
+  @media (min-width: 1920px) {
+  }
+  @media (min-width: 3840px) {
   }
 }
 
@@ -173,6 +182,10 @@ section {
   @media (min-width: 1600px) {
     padding: 12px 25px;
   }
+  @media (min-width: 1920px) {
+  }
+  @media (min-width: 3840px) {
+  }
 }
 
 .button-red,
@@ -203,6 +216,10 @@ section {
   }
   @media (min-width: 1200px) {
     font-size: 26px;
+  }
+  @media (min-width: 1920px) {
+  }
+  @media (min-width: 3840px) {
   }
   @media (any-hover: hover) {
     &:hover {
@@ -257,6 +274,10 @@ section {
     top: 95px;
     padding: 0 35px;
   }
+  @media (min-width: 1920px) {
+  }
+  @media (min-width: 3840px) {
+  }
   // opacity: 0;
   // user-select: none;
   // visibility: hidden;
@@ -287,6 +308,10 @@ section {
     }
     @media (min-width: 1600px) {
       padding: 23px 32px;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
 
@@ -327,6 +352,10 @@ section {
     }
     @media (min-width: 1200px) {
       flex: 0 0 203px;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
   // .navigation__menu

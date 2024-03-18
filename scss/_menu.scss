@@ -24,6 +24,10 @@
     @media (min-width: 1600px) {
       gap: 37px;
     }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
+    }
   }
   // .menu__item
   &__item {
@@ -62,6 +66,10 @@
     }
     @media (min-width: 1200px) {
       font-size: 26px;
+    }
+    @media (min-width: 1920px) {
+    }
+    @media (min-width: 3840px) {
     }
   }
 }

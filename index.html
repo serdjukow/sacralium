@@ -5,10 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SACRALIUM</title>
-    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x2.webp" type="image/webp">
-    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x1.5.webp" type="image/webp">
-    <link rel="preload" fetchpriority="high" as="image" href="./images/character.webp" type="image/webp">
-    <link rel="preload" fetchpriority="high" as="image" href="./images/home-bg.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x2.webp" type="image/webp" media="(min-width: 1200px)">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x1.5.webp" type="image/webp" media="(min-width: 768px)">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/character.webp" type="image/webp" media="(min-width: 320px)">
+    <!-- <link rel="preload" fetchpriority="high" as="image" href="./images/home-bg.webp" type="image/webp" media="(min-width: 320px)"> -->
+    <!-- <link rel="preload" as="image" href="./images/home-bg.webp" 
+    imagesrcset="./images/character.x1.5.webp 768w, ./images/character.x2.webp 1200w" 
+    imagesizes="50vw"
+    > -->
+    <!-- <link rel="preload" href="small_cat.jpg" as="image" media="(min-width: 1200px)">
+    <link rel="preload" href="medium_cat.jpg" as="image" media="(min-width: 768px)">
+    <link rel="preload" href="large_cat.jpg" as="image" media="(min-width: 480px)"> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -295,33 +302,30 @@
             <div class="cults__skills">
               <figure class="cults__skill skill">
                 <div class="skill__wrapper">
-                <h5 class="skill__title">СВЕТ</h5>
-                <div class="skill__subtitle">Сила, Иерархия, Честь</div>
-                <div
-                  class="skill__logo"
-                  style="background-image: url(../images/light.webp)"
-                ></div>
-              </div>
+                  <h5 class="skill__title">СВЕТ</h5>
+                  <p class="skill__subtitle">Сила, Иерархия, Честь</p>
+                  <div class="skill__logo">
+                    <img src="../images/light.webp" alt="СВЕТ">
+                  </div>
+                </div>
               </figure>
-             <figure class="cults__skill skill">
+              <figure class="cults__skill skill">
                 <div class="skill__wrapper">
-                <h5 class="skill__title">ТЬМА</h5>
-                <div class="skill__subtitle">Интеллект, Контроль</div>
-                <div
-                  class="skill__logo"
-                  style="background-image: url(../images/darkness.webp)"
-                ></div>
-              </div>
+                  <h5 class="skill__title">ТЬМА</h5>
+                  <p class="skill__subtitle">Интеллект, Контроль</p>
+                  <div class="skill__logo">
+                    <img src="../images/darkness.webp" alt="ТЬМА">
+                  </div>
+                </div>
                </figure>
               <figure class="cults__skill skill">
                 <div class="skill__wrapper">
-                <h5 class="skill__title">ХАОС</h5>
-                <div class="skill__subtitle">Интуиция, Свобода</div>
-                <div
-                  class="skill__logo"
-                  style="background-image: url(../images/chaos.webp)"
-                ></div>
-                 </div>
+                  <h5 class="skill__title">ХАОС</h5>
+                  <p class="skill__subtitle">Интуиция, Свобода</p>
+                  <div class="skill__logo">
+                    <img src="../images/chaos.webp" alt="ХАОС">
+                  </div>
+                </div>
               </figure>
             </div>
           </div>
