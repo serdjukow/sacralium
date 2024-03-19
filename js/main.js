@@ -20,7 +20,7 @@ const stikyHeader = () => {
 const headerSticky = () => {
   window.addEventListener("scroll", () => {
     stikyHeader();
-    showHeader()
+    showHeader();
   });
 };
 headerSticky();
@@ -133,6 +133,15 @@ const toggleBurgerActive = () => {
   const menuButton = document.querySelector("#nav-icon");
   const body = document.querySelector("body");
   const mobile_menu = document.querySelector(".mobile-menu");
+  const mobile_menu__link = document.querySelectorAll(".mobile-menu__link");
+
+  mobile_menu__link.forEach(item => {
+    item.addEventListener("click", () => {
+      menuButton.classList.remove("_active");
+      body.classList.remove("_lock");
+      mobile_menu.classList.remove("_active");
+    });
+  })
 
   menuButton?.addEventListener("click", (event) => {
     if (event.target.closest("#nav-icon")) {
