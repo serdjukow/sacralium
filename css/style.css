@@ -1106,9 +1106,12 @@ section [class*=__container] {
 }
 .world__map {
   aspect-ratio: 8/5;
-  background-image: url(../images/world-map.png);
-  background-size: cover;
-  background-position: center;
+}
+.world__map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .world__map {
