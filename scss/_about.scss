@@ -62,7 +62,7 @@
   // .slider-media__bg
 
   &__bg {
-    aspect-ratio: 3/2;
+    aspect-ratio: 16/9;
     video,
     img {
       width: 100%;
@@ -70,7 +70,7 @@
       object-fit: cover;
     }
     @media (min-width: 1600px) {
-      aspect-ratio: 372/209;
+      //aspect-ratio: 372/209;
     }
   }
 }

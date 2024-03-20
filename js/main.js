@@ -59,17 +59,10 @@ function goTo() {
       if (menuLink.getAttribute("href")) {
         const goToBlock = document.querySelector(menuLink.getAttribute("href"));
         const goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY;
-        if (menuLink.getAttribute("href").substring(1) === "about") {
-          window.scrollTo({
-            top: goToBlockValue - 20,
-            behavior: "smooth",
-          });
-        } else {
-          window.scrollTo({
-            top: goToBlockValue,
-            behavior: "smooth",
-          });
-        }
+        window.scrollTo({
+          top: goToBlockValue - 50, // Дополнительное смещение, если нужно
+          behavior: "smooth",
+        });
         e.preventDefault();
       }
     }
@@ -86,13 +79,13 @@ let ticking = false;
 function highlightNavLink() {
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      let fromTop = window.scrollY; // Дополнительное смещение, если нужно
+      let fromTop = window.scrollY + 60; // Дополнительное смещение, если нужно
       sections.forEach((section) => {
         if (
           section.offsetTop <= fromTop &&
           section.offsetTop + section.offsetHeight > fromTop
         ) {
-          const id = section.id;
+          let id = section.id;
           localStorage.setItem("activeSection", id);
           navLinks.forEach((link) => {
             link.classList.remove("active");
@@ -135,13 +128,13 @@ const toggleBurgerActive = () => {
   const mobile_menu = document.querySelector(".mobile-menu");
   const mobile_menu__link = document.querySelectorAll(".mobile-menu__link");
 
-  mobile_menu__link.forEach(item => {
+  mobile_menu__link?.forEach((item) => {
     item.addEventListener("click", () => {
       menuButton.classList.remove("_active");
       body.classList.remove("_lock");
       mobile_menu.classList.remove("_active");
     });
-  })
+  });
 
   menuButton?.addEventListener("click", (event) => {
     if (event.target.closest("#nav-icon")) {

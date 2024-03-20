@@ -158,11 +158,6 @@ section {
   background-color: #900302;
   transition: opacity var(--elements_transition);
   font-size: 14px;
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: 0.6;
-    }
-  }
   min-width: 80px;
   border-radius: 4px;
   padding: 5px 12px;
@@ -200,7 +195,6 @@ section {
   cursor: pointer;
   border: none;
   user-select: none;
-  transition: opacity var(--elements_transition);
   font-size: 20px;
   width: 280px;
   padding: 12px;
@@ -221,11 +215,6 @@ section {
   }
   @media (min-width: 3840px) {
   }
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: 0.6;
-    }
-  }
 }
 .button-go,
 .button-red,
@@ -234,13 +223,23 @@ section {
   font-weight: 400;
   letter-spacing: 0.03em;
   text-align: center;
+  opacity: 0.85;
+  transition: var(--elements_transition);
   strong {
     background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 1;
-    text-shadow: 0 0 15px #9d822b;
+    text-shadow: 0 0 45px #9d822b;
+    transition: var(--elements_transition);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 1;
+      strong {
+        text-shadow: 0 0 15px #9d822b;
+      }
+    }
   }
 }
 

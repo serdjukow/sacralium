@@ -165,11 +165,6 @@ section [class*=__container] {
   border-radius: 4px;
   padding: 5px 12px;
 }
-@media (any-hover: hover) {
-  .button-go:hover {
-    opacity: 0.6;
-  }
-}
 @media (min-width: 768px) {
   .button-go {
     font-size: 20px;
@@ -213,8 +208,6 @@ section [class*=__container] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: opacity var(--elements_transition);
-  transition: opacity var(--elements_transition);
   font-size: 20px;
   width: 280px;
   padding: 12px;
@@ -244,13 +237,6 @@ section [class*=__container] {
     font-size: 26px;
   }
 }
-@media (any-hover: hover) {
-  .button-red:hover,
-  .button-gray:hover {
-    opacity: 0.6;
-  }
-}
-
 .button-go,
 .button-red,
 .button-gray {
@@ -258,6 +244,9 @@ section [class*=__container] {
   font-weight: 400;
   letter-spacing: 0.03em;
   text-align: center;
+  opacity: 0.85;
+  -webkit-transition: var(--elements_transition);
+  transition: var(--elements_transition);
 }
 .button-go strong,
 .button-red strong,
@@ -267,8 +256,21 @@ section [class*=__container] {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
-  text-shadow: 0 0 15px #9d822b;
+  text-shadow: 0 0 45px #9d822b;
+  -webkit-transition: var(--elements_transition);
+  transition: var(--elements_transition);
+}
+@media (any-hover: hover) {
+  .button-go:hover,
+  .button-red:hover,
+  .button-gray:hover {
+    opacity: 1;
+  }
+  .button-go:hover strong,
+  .button-red:hover strong,
+  .button-gray:hover strong {
+    text-shadow: 0 0 15px #9d822b;
+  }
 }
 
 .button-red {
@@ -977,7 +979,7 @@ section [class*=__container] {
 }
 
 .slider-media__bg {
-  aspect-ratio: 3/2;
+  aspect-ratio: 16/9;
 }
 .slider-media__bg video,
 .slider-media__bg img {
@@ -986,12 +988,6 @@ section [class*=__container] {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 1600px) {
-  .slider-media__bg {
-    aspect-ratio: 372/209;
-  }
-}
-
 .slider-text__content {
   min-height: auto;
 }
