@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta name="robots" content="noindex" />  <!-- Dev mode -->
+    <meta name="robots" content="noindex" />
+    <!-- Dev mode -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SACRALIUM</title>
-    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x2.webp" type="image/webp" media="(min-width: 1200px)">
-    <link rel="preload" fetchpriority="high" as="image" href="./images/character.x1.5.webp" type="image/webp" media="(min-width: 768px)">
-    <link rel="preload" fetchpriority="high" as="image" href="./images/character.webp" type="image/webp" media="(min-width: 320px)">
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="./images/character.x2.webp"
+      type="image/webp"
+      media="(min-width: 1200px)"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="./images/character.x1.5.webp"
+      type="image/webp"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="./images/character.webp"
+      type="image/webp"
+      media="(min-width: 320px)"
+    />
     <!-- <link rel="preload" fetchpriority="high" as="image" href="./images/home-bg.webp" type="image/webp" media="(min-width: 320px)"> -->
     <!-- <link rel="preload" as="image" href="./images/home-bg.webp" 
     imagesrcset="./images/character.x1.5.webp 768w, ./images/character.x2.webp 1200w" 
@@ -19,9 +41,12 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />  
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="js/sliders.js" defer></script>
     <script src="js/form.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -119,7 +144,7 @@
                 </a>
                 <button class="header__button button-gray">
                   <strong>Подробности...</strong>
-                </и>
+                </button>
               </div>
             </div>
             <div class="header__hero">
@@ -132,9 +157,13 @@
                   media="(min-width: 768px)"
                   srcset="images/character.x1.5.webp"
                 />
-              <img src="images/character.webp" alt="ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG" loading="lazy"/>
-            </picture>
-          </div>
+                <img
+                  src="images/character.webp"
+                  alt="ХАРДКОРНАЯ БРАУЗЕРНАЯ MMORPG"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </header>
@@ -146,32 +175,16 @@
                 <div class="swiper-wrapper slider-media__wrapper">
                   <div class="swiper-slide slider-media__slide">
                     <div class="slider-media__bg bg-gray">
-                    <picture>
-                      <source
-                        media="(min-width: 1200px)"
-                        srcset="images/about-slide.x2.webp"
-                      />
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="images/about-slide.x1.5.webp"
-                      />
-                    <img src="images/about-slide.webp" alt="Персонаж" loading="lazy"/>
-                  </picture>
-                  </div>
-                  </div>
-                  <div class="swiper-slide slider-media__slide">
-                    <div class="slider-media__bg bg-gray">
-                     <picture>
-                      <source
-                        media="(min-width: 1200px)"
-                        srcset="images/about-slide.x2.webp"
-                      />
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="images/about-slide.x1.5.webp"
-                      />
-                      <img src="images/about-slide.webp" alt="Персонаж" loading="lazy"/>
-                    </picture>
+                      <video
+                        autoplay="true"
+                        loop
+                        poster="images/about-slide.webp"
+                      >
+                        <source
+                          src="images/Shot_final_vin(1920x1080).mp4"
+                          type="video/mp4"
+                        />
+                      </video>
                     </div>
                   </div>
                 </div>
@@ -186,27 +199,49 @@
                       </h2>
                       <p class="slider-text__text text">
                         Путешествуйте из города в город, торгуйте, сражайтесь и
-                        выполняте квесты в генерируемых многоуровневых данжах,
+                        выполняйте квесты в генерируемых многоуровневых данжах,
                         как в Roguelike играх, рассчитанных как на соло, так и
                         на кооперативное групповое прохождение.
                       </p>
-                      <p class="text">
+                      <p class="slider-text__text text">
                         Повышайте ваш уровень славы, чтобы получать задания и
                         награды, достойные настоящего героя.
                       </p>
                     </div>
                   </div>
 
-                  <div class="swiper-slide slider-text__slide  bg-gray">
+                  <div class="swiper-slide slider-text__slide bg-gray">
                     <div class="slider-text__content">
                       <h2 class="slider-text__title title">
-                        ГОРОДА И ПУТЕШЕСТВИЯ
+                        КЛАССЫ И ПРОКАЧКА
                       </h2>
                       <p class="slider-text__text text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptates odio a, vero dolorem, quod eos
-                        repudiandae quia quaerat sit quisquam dolor praesentium
-                        omnis.
+                        Сочетайте умения, оружие и магию как захочется: класс
+                        персонажа определяется экипировкой, тактикой и билдом.
+                      </p>
+                      <p class="slider-text__text text">
+                        Прокачивайте экипировку до уровня "легендарных"
+                        предметов благодаря аутентичной системе опыта вещей.
+                      </p>
+                      <p class="slider-text__text text">
+                        Улучшайте предметы магическими рунами и придавайте им
+                        новые свойства.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slider-text__slide bg-gray">
+                    <div class="slider-text__content">
+                      <h2 class="slider-text__title title">БОЕВАЯ СИСТЕМА</h2>
+                      <p class="slider-text__text text">
+                        Попробуйте силы и удачу в массовых "хаотических" PvP
+                        сражениях, до 500 человек в одном бою. Или подстерегайте
+                        врагов поодиночке. Боги Ваальбора поощряют
+                        кровопролитие!
+                      </p>
+                      <p class="slider-text__text text">
+                        Современный интерфейс, арт и гейм-дизайн преподносят
+                        боевую систему из легендарного Бойцовского Клуба в
+                        свежем формате, бережно сохраняя идею и фан прародителя.
                       </p>
                     </div>
                   </div>
@@ -234,34 +269,42 @@
               </p>
             </div>
             <div class="world__map">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/world-map.x2.webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/world-map.x1.5.webp"
-                  />
-                  <img src="images/world-map.webp" alt="МИР ИГРЫ" loading="lazy"/>
-                </picture>
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="images/world-map.x2.webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="images/world-map.x1.5.webp"
+                />
+                <img
+                  src="images/world-map.webp"
+                  alt="МИР ИГРЫ"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </section>
         <section id="danji" class="danji section">
           <div class="danji__container">
             <div class="danji__img">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/danji.x2.webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/danji.x1.5.webp"
-                  />
-                  <img src="images/danji.webp" alt="ДАНЖИ И БОССЫ" loading="lazy"/>
-                </picture>
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="images/danji.x2.webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="images/danji.x1.5.webp"
+                />
+                <img
+                  src="images/danji.webp"
+                  alt="ДАНЖИ И БОССЫ"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <div class="danji__content">
               <h2 class="danji__title title">ДАНЖИ И БОССЫ</h2>
@@ -305,7 +348,7 @@
                   <h5 class="skill__title">СВЕТ</h5>
                   <p class="skill__subtitle">Сила, Иерархия, Честь</p>
                   <div class="skill__logo">
-                    <img src="../images/light.webp" alt="СВЕТ">
+                    <img src="../images/light.webp" alt="СВЕТ" />
                   </div>
                 </div>
               </figure>
@@ -314,16 +357,16 @@
                   <h5 class="skill__title">ТЬМА</h5>
                   <p class="skill__subtitle">Интеллект, Контроль</p>
                   <div class="skill__logo">
-                    <img src="../images/darkness.webp" alt="ТЬМА">
+                    <img src="../images/darkness.webp" alt="ТЬМА" />
                   </div>
                 </div>
-               </figure>
+              </figure>
               <figure class="cults__skill skill">
                 <div class="skill__wrapper">
                   <h5 class="skill__title">ХАОС</h5>
                   <p class="skill__subtitle">Интуиция, Свобода</p>
                   <div class="skill__logo">
-                    <img src="../images/chaos.webp" alt="ХАОС">
+                    <img src="../images/chaos.webp" alt="ХАОС" />
                   </div>
                 </div>
               </figure>
@@ -333,7 +376,9 @@
             <div class="registration__container">
               <div class="registration__body">
                 <div class="registration__content">
-                  <h2 class="registration__title title">ПРЕДВАРИТЕЛЬНАЯ РЕГИСТРАЦИЯ</h2>
+                  <h2 class="registration__title title">
+                    ПРЕДВАРИТЕЛЬНАЯ РЕГИСТРАЦИЯ
+                  </h2>
                   <p class="registration__text text">
                     Станьте одним из первых героев в мире Ваальбора ! Игра еще
                     находится в разработке, но если вы оставите ваш e-mail - мы
@@ -383,7 +428,11 @@
                     media="(min-width: 768px)"
                     srcset="images/register-img_x1.5.webp"
                   />
-                  <img src="images/register-img.webp" alt="Персонаж" loading="lazy"/>
+                  <img
+                    src="images/register-img.webp"
+                    alt="Персонаж"
+                    loading="lazy"
+                  />
                 </picture>
               </div>
             </div>

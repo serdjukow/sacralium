@@ -979,6 +979,7 @@ section [class*=__container] {
 .slider-media__bg {
   aspect-ratio: 3/2;
 }
+.slider-media__bg video,
 .slider-media__bg img {
   width: 100%;
   height: 100%;
@@ -1105,6 +1106,7 @@ section [class*=__container] {
   }
 }
 .world__map {
+  position: relative;
   aspect-ratio: 8/5;
 }
 .world__map img {
