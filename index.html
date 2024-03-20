@@ -176,12 +176,21 @@
                   <div class="swiper-slide slider-media__slide">
                     <div class="slider-media__bg bg-gray">
                       <video
-                        autoplay="true"
-                        loop
-                        poster="images/about-slide.webp"
+                        autoplay="autoplay"
+                        loop="loop"
+                        muted="muted"
+                        poster="./images/about-slide.webp"
                       >
                         <source
-                          src="images/Shot_final_vin(1920x1080).mp4"
+                          src="./images/shot_final_vin.ogg"
+                          type="video/ogg"
+                        />
+                        <source
+                          src="./images/shot_final_vin.avi"
+                          type="video/avi"
+                        />
+                        <source
+                          src="./images/shot_final_vin.mp4"
                           type="video/mp4"
                         />
                       </video>

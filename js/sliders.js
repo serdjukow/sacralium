@@ -1,6 +1,3 @@
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-
 const swiperText = new Swiper(".slider-text", {
   spaceBetween: 30,
   loop: true,
@@ -19,7 +16,6 @@ const swiperText = new Swiper(".slider-text", {
 
 const swiperMedia = new Swiper(".slider-media", {
   spaceBetween: 30,
-  loop: false,
   // speed: 2400,
   effect: "fade",
 });
