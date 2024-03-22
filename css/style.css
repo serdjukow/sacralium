@@ -35,7 +35,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  vertical-align: top;
 }
 
 h1,
@@ -57,6 +56,13 @@ body._lock {
           flex: 1 1 auto;
 }
 
+.border {
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.3)), color-stop(50%, rgba(253, 219, 120, 0.4)), to(rgba(15, 15, 15, 0.3)));
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.3) 0%, rgba(253, 219, 120, 0.4) 50%, rgba(15, 15, 15, 0.3) 100%);
+}
+
 section {
   color: #fff;
 }
@@ -73,12 +79,23 @@ section [class*=__container] {
 @media (min-width: 768px) {
   section [class*=__container] {
     padding: 50px 30px 0;
+    max-width: 768px;
   }
 }
 @media (min-width: 1024px) {
   section [class*=__container] {
     padding: 65px 50px 0;
-    max-width: 1340px;
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1200px) {
+  section [class*=__container] {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1600px) {
+  section [class*=__container] {
+    max-width: 1350px;
   }
 }
 
@@ -158,8 +175,6 @@ section [class*=__container] {
   text-decoration: none;
   text-transform: uppercase;
   background-color: #900302;
-  -webkit-transition: opacity var(--elements_transition);
-  transition: opacity var(--elements_transition);
   font-size: 14px;
   min-width: 80px;
   border-radius: 4px;
@@ -208,10 +223,13 @@ section [class*=__container] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: 20px;
   width: 280px;
   padding: 12px;
   text-decoration: none;
+}
+.button-red strong,
+.button-gray strong {
+  font-size: 20px;
 }
 @media (min-width: 480px) {
   .button-red,
@@ -219,30 +237,15 @@ section [class*=__container] {
     width: 236px;
   }
 }
-@media (min-width: 768px) {
-  .button-red,
-  .button-gray {
-    font-size: 20px;
-  }
-}
 @media (min-width: 1024px) {
-  .button-red,
-  .button-gray {
-    font-size: 26px;
-  }
-}
-@media (min-width: 1200px) {
-  .button-red,
-  .button-gray {
+  .button-red strong,
+  .button-gray strong {
     font-size: 26px;
   }
 }
 .button-go,
 .button-red,
 .button-gray {
-  font-family: var(--font-family);
-  font-weight: 400;
-  letter-spacing: 0.03em;
   text-align: center;
   opacity: 0.85;
   -webkit-transition: var(--elements_transition);
@@ -251,6 +254,9 @@ section [class*=__container] {
 .button-go strong,
 .button-red strong,
 .button-gray strong {
+  font-family: var(--font-family);
+  font-weight: 400;
+  letter-spacing: 0.03em;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff8d5), to(#efd7aa));
   background: linear-gradient(180deg, #fff8d5 0%, #efd7aa 100%);
   background-clip: text;
@@ -993,19 +999,11 @@ section [class*=__container] {
 }
 @media (min-width: 768px) {
   .slider-text__content {
-    min-height: 228px;
     padding-left: 20px;
   }
 }
-@media (min-width: 1024px) {
-  .slider-text__content {
-    min-height: 320px;
-  }
-}
-@media (min-width: 1200px) {
-  .slider-text__content {
-    min-height: 418px;
-  }
+.slider-text__text:last-child {
+  margin-bottom: 0;
 }
 
 .swiper-pagination {
@@ -1595,13 +1593,25 @@ section [class*=__container] {
   }
 }
 .form__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 63px;
+}
+.form__button button {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .form__button button {
+    margin-left: 165px;
+  }
+}
+@media (min-width: 1024px) {
+  .form__button button {
+    margin-left: 205px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__button button {
+    margin-left: 246px;
+  }
 }
 .form label {
   -ms-flex-item-align: center;

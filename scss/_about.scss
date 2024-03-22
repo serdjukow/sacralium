@@ -88,14 +88,17 @@
     @media (min-width: 768px) {
     }
     @media (min-width: 768px) {
-      min-height: 228px;
       padding-left: 20px;
     }
     @media (min-width: 1024px) {
-      min-height: 320px;
     }
     @media (min-width: 1200px) {
-      min-height: 418px;
+    }
+  }
+
+  &__text {
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

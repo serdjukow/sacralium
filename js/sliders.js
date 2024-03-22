@@ -8,7 +8,7 @@ const swiperText = new Swiper(".slider-text", {
     clickable: true,
   },
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   autoHeight: true,
@@ -16,7 +16,6 @@ const swiperText = new Swiper(".slider-text", {
 
 const swiperMedia = new Swiper(".slider-media", {
   spaceBetween: 30,
-  // speed: 2400,
   effect: "fade",
 });
 

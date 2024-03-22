@@ -161,9 +161,20 @@
   // .form__button
 
   &__button {
-    display: flex;
-    justify-content: center;
     margin-top: 63px;
+
+    button {
+      margin: 0 auto;
+      @media (min-width: 768px) {
+        margin-left: 165px;
+      }
+      @media (min-width: 1024px) {
+         margin-left: 205px;
+      }
+      @media (min-width: 1600px) {
+        margin-left: 246px;
+      }
+    }
   }
 
   label {
