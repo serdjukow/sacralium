@@ -23,7 +23,7 @@
     }
     @media (min-width: 1024px) {
       position: absolute;
-      right: 28px;
+      right: 0;
       bottom: 0;
       max-width: 381px;
     }
@@ -34,8 +34,10 @@
       max-width: 468px;
     }
     @media (min-width: 1920px) {
+      max-width: 611px;
     }
     @media (min-width: 3840px) {
+      max-width: 1222px;
     }
   }
 
@@ -57,8 +59,10 @@
       max-width: 740px;
     }
     @media (min-width: 1920px) {
+      max-width: 873px;
     }
     @media (min-width: 3840px) {
+      max-width: 1746px;
     }
   }
 
@@ -81,8 +85,10 @@
       margin-bottom: 95px;
     }
     @media (min-width: 1920px) {
+      margin-bottom: 149px;
     }
     @media (min-width: 3840px) {
+      margin-bottom: 299px;
     }
   }
 
@@ -114,10 +120,27 @@
       padding-bottom: 90px;
     }
     @media (min-width: 1920px) {
+      padding-bottom: 108px;
+    }
+    @media (min-width: 3840px) {
     }
   }
 }
 .form {
+  &__feds {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+     @media (min-width: 768px) {
+      gap: 21px;
+     }
+    @media (min-width: 1920px) {
+      gap: 25px;
+    }
+    @media (min-width: 3840px) {
+      gap: 50px;
+    }
+  }
   // .form__feld
 
   &__feld {
@@ -126,10 +149,6 @@
     grid-template-columns: 210px 1fr;
     grid-template-columns: 1fr;
     font-size: 16px;
-    gap: 6px;
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
     @media (min-width: 480px) {
       grid-template-columns: 1fr;
       font-size: 16px;
@@ -139,7 +158,6 @@
       grid-template-columns: 135px 1fr;
       font-size: 20px;
       gap: 30px;
-      padding-right: 15px;
     }
     @media (min-width: 1024px) {
       grid-template-columns: 175px 1fr;
@@ -153,32 +171,20 @@
       gap: 37px;
     }
     @media (min-width: 1920px) {
+      grid-template-columns: 241px 1fr;
+      font-size: 36px;
+      gap: 60px;
     }
     @media (min-width: 3840px) {
-    }
-  }
-
-  // .form__button
-
-  &__button {
-    margin-top: 63px;
-
-    button {
-      margin: 0 auto;
-      @media (min-width: 768px) {
-        margin-left: 165px;
-      }
-      @media (min-width: 1024px) {
-         margin-left: 205px;
-      }
-      @media (min-width: 1600px) {
-        margin-left: 246px;
-      }
+      grid-template-columns: 481px 1fr;
+      font-size: 72px;
+      gap: 120px;
     }
   }
 
   label {
     align-self: center;
+    color: #fff;
   }
   input {
     width: 100%;
@@ -187,7 +193,7 @@
     cursor: auto;
     border-radius: 6px;
     border-color: transparent;
-    font-size: 30px;
+    font-size: 16px;
     caret-color: #333;
     padding: 6px 10px;
     -webkit-appearance: none;
@@ -202,7 +208,6 @@
     &::-webkit-input-placeholder,
     &::-webkit-input-placeholder,
     &::placeholder {
-      font-size: 30px !important;
       color: #333;
       text-shadow: none;
       -webkit-text-fill-color: #333;
@@ -216,14 +221,55 @@
       -webkit-text-fill-color: inherit;
       -webkit-box-shadow: inherit;
       font-size: inherit;
-      font-size: 30px !important;
     }
 
-    &:-internal-autofill-previewed {
-      font-size: 30px !important;
+    @media (min-width: 768px) {
+      font-size: 20px;
     }
-    &:valid {
-      font-size: 30px !important;
+    @media (min-width: 1024px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 30px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 36px;
+    }
+    @media (min-width: 3840px) {
+      font-size: 72px;
+    }
+  }
+  // .form__button
+
+  &__button-container {
+    margin-top: 25px;
+
+    button {
+      margin: 0 auto;
+      @media (min-width: 768px) {
+        margin-left: 165px;
+      }
+      @media (min-width: 1024px) {
+        margin-left: 205px;
+      }
+      @media (min-width: 1600px) {
+        margin-left: 246px;
+      }
+      @media (min-width: 1920px) {
+        margin-left: 301px;
+      }
+      @media (min-width: 3840px) {
+        margin-left: 597px;
+      }
+    }
+    @media (min-width: 1024px) {
+      margin-top: 50px;
+    }
+    @media (min-width: 1920px) {
+      margin-top: 60px;
+    }
+    @media (min-width: 3840px) {
+      margin-top: 115px;
     }
   }
 }

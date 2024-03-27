@@ -12,9 +12,22 @@
     gap: 20px;
     @media (min-width: 768px) {
       flex-direction: row;
+      gap: 29px;
+    }
+    @media (min-width: 1024px) {
+      gap: 34px;
     }
     @media (min-width: 1200px) {
+      gap: 46px;
+    }
+    @media (min-width: 1600px) {
       gap: 24px;
+    }
+    @media (min-width: 1920px) {
+      gap: 64px;
+    }
+    @media (min-width: 3840px) {
+      gap: 120px;
     }
   }
 
@@ -35,6 +48,12 @@
     }
     @media (min-width: 1600px) {
       flex: 0 0 740px;
+    }
+    @media (min-width: 1920px) {
+      flex: 0 0 892px;
+    }
+    @media (min-width: 3840px) {
+      flex: 0 0 1784px;
     }
   }
 }
@@ -86,13 +105,7 @@
   &__content {
     min-height: auto;
     @media (min-width: 768px) {
-    }
-    @media (min-width: 768px) {
       padding-left: 20px;
-    }
-    @media (min-width: 1024px) {
-    }
-    @media (min-width: 1200px) {
     }
   }
 
@@ -110,11 +123,19 @@
   justify-content: center;
   align-items: center;
   gap: 7px;
-  padding: 24px 0 20px 0;
+  padding: 20px 0 29px 0;
   bottom: auto !important;
   z-index: 0;
   @media (min-width: 768px) {
     padding: 24px 0 30px 0;
+  }
+  @media (min-width: 1920px) {
+    padding: 30px 0 35px 0;
+    gap: 9px;
+  }
+  @media (min-width: 3840px) {
+    padding: 69px 0 70px 0;
+    gap: 17px;
   }
 
   .swiper-pagination-bullet {
@@ -130,6 +151,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (min-width: 1920px) {
+      width: 23px;
+      height: 23px;
+    }
+    @media (min-width: 3840px) {
+      width: 46px;
+      height: 46px;
+    }
   }
   .swiper-pagination-bullet-active {
     background-image: url(../images/swiper-pagination-active.svg);

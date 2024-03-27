@@ -143,6 +143,14 @@
             <div class="header__hero">
               <picture>
                 <source
+                  media="(min-width: 3840px)"
+                  srcset="images/character.x2.webp"
+                />
+                <source
+                  media="(min-width: 1920px)"
+                  srcset="images/character.x2.webp"
+                />
+                <source
                   media="(min-width: 1200px)"
                   srcset="images/character.x2.webp"
                 />
@@ -275,6 +283,14 @@
             <div class="world__map">
               <picture>
                 <source
+                  media="(min-width: 3840px)"
+                  srcset="images/world-map-4k.png"
+                />
+                <source
+                  media="(min-width: 1920px)"
+                  srcset="images/world-map-full-hd.png"
+                />
+                <source
                   media="(min-width: 1200px)"
                   srcset="images/world-map.x2.webp"
                 />
@@ -296,6 +312,14 @@
           <div class="danji__container">
             <div class="danji__img">
               <picture>
+                <source
+                  media="(min-width: 3840px)"
+                  srcset="images/danji-4k.png"
+                />
+                <source
+                  media="(min-width: 1920px)"
+                  srcset="images/danji-full-hd.png"
+                />
                 <source
                   media="(min-width: 1200px)"
                   srcset="images/danji.x2.webp"
@@ -348,98 +372,109 @@
                 культа, или герои сошлись в темной подворотне. Главное - победа!
               </p>
             </div>
-            <div class="cults__skills">
-              <figure class="cults__skill skill">
-                <div class="skill__wrapper">
-                  <h5 class="skill__title">СВЕТ</h5>
-                  <p class="skill__subtitle">Сила, Иерархия, Честь</p>
-                  <div class="skill__logo">
-                    <img src="../images/light.webp" alt="СВЕТ" />
-                  </div>
-                </div>
-              </figure>
-              <figure class="cults__skill skill">
-                <div class="skill__wrapper">
-                  <h5 class="skill__title">ТЬМА</h5>
-                  <p class="skill__subtitle">Интеллект, Контроль</p>
-                  <div class="skill__logo">
-                    <img src="../images/darkness.webp" alt="ТЬМА" />
-                  </div>
-                </div>
-              </figure>
-              <figure class="cults__skill skill">
-                <div class="skill__wrapper">
-                  <h5 class="skill__title">ХАОС</h5>
-                  <p class="skill__subtitle">Интуиция, Свобода</p>
-                  <div class="skill__logo">
-                    <img src="../images/chaos.webp" alt="ХАОС" />
-                  </div>
-                </div>
-              </figure>
-            </div>
           </div>
-          <div id="registration" class="registration">
-            <div class="registration__container">
-              <div class="registration__body">
-                <div class="registration__content">
-                  <h2 class="registration__title title">
-                    ПРЕДВАРИТЕЛЬНАЯ РЕГИСТРАЦИЯ
-                  </h2>
-                  <p class="registration__text text">
-                    Станьте одним из первых героев в мире Ваальбора ! Игра еще
-                    находится в разработке, но если вы оставите ваш e-mail - мы
-                    напишем, когда она выйдет в открытый доступ или пригласим на
-                    закрытое тестирование. Прямо сейчас - регистрация позволяет
-                    писать сообщения на форуме и забронировать имя персонажа.
-                    Герои, зарегистрировавшиеся заранее, получат при открытии
-                    игры гарантированный бонус.
-                  </p>
-                </div>
-
-                <form id="form" class="registration__form form">
-                  <div class="form__feld">
-                    <label for="e-mail">E-Mail</label>
-                    <input
-                      type="email"
-                      name="e-mail"
-                      id="e-mail"
-                      autocomplete="off"
-                      required
-                    />
+          <div class="cults__bg">
+            <div class="cults__container" style="padding-top: 0">
+              <div class="cults__skills">
+                <figure class="cults__skill skill">
+                  <div class="skill__wrapper">
+                    <h5 class="skill__title">СВЕТ</h5>
+                    <p class="skill__subtitle">Сила, Иерархия, Честь</p>
+                    <div class="skill__logo">
+                      <img src="../images/light.webp" alt="СВЕТ" />
+                    </div>
                   </div>
-                  <div class="form__feld">
-                    <label for="name">Имя персонажа</label>
-                    <input
-                      type="name"
-                      name="name"
-                      id="name"
-                      autocomplete="off"
-                      required
-                    />
+                </figure>
+                <figure class="cults__skill skill">
+                  <div class="skill__wrapper">
+                    <h5 class="skill__title">ТЬМА</h5>
+                    <p class="skill__subtitle">Интеллект, Контроль</p>
+                    <div class="skill__logo">
+                      <img src="../images/darkness.webp" alt="ТЬМА" />
+                    </div>
                   </div>
-                  <div class="form__button">
-                    <button class="button-red">
-                      <strong>ОТПРАВИТЬ</strong>
-                    </button>
+                </figure>
+                <figure class="cults__skill skill">
+                  <div class="skill__wrapper">
+                    <h5 class="skill__title">ХАОС</h5>
+                    <p class="skill__subtitle">Интуиция, Свобода</p>
+                    <div class="skill__logo">
+                      <img src="../images/chaos.webp" alt="ХАОС" />
+                    </div>
                   </div>
-                </form>
+                </figure>
               </div>
-              <div class="registration__figure">
-                <picture>
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="images/register-img_x2.webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="images/register-img_x1.5.webp"
-                  />
-                  <img
-                    src="images/register-img.webp"
-                    alt="Персонаж"
-                    loading="lazy"
-                  />
-                </picture>
+            </div>
+
+            <div class="registration">
+              <div class="registration__container">
+                <div class="registration__body">
+                  <div class="registration__content">
+                    <h2 class="registration__title title">
+                      ПРЕДВАРИТЕЛЬНАЯ РЕГИСТРАЦИЯ
+                    </h2>
+                    <p class="registration__text text">
+                      Станьте одним из первых героев в мире Ваальбора ! Игра еще
+                      находится в разработке, но если вы оставите ваш e-mail -
+                      мы напишем, когда она выйдет в открытый доступ или
+                      пригласим на закрытое тестирование. Прямо сейчас -
+                      регистрация позволяет писать сообщения на форуме и
+                      забронировать имя персонажа. Герои, зарегистрировавшиеся
+                      заранее, получат при открытии игры гарантированный бонус.
+                    </p>
+                  </div>
+
+                  <form id="form" class="registration__form form">
+                    <div class="form__feds">
+                      <div class="form__feld">
+                        <label for="e-mail">E-Mail</label>
+                        <input
+                          type="email"
+                          name="e-mail"
+                          id="e-mail"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                      <div class="form__feld">
+                        <label for="name">Имя персонажа</label>
+                        <input
+                          type="name"
+                          name="name"
+                          id="name"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form__button-container">
+                      <button class="button-red">
+                        <strong>ОТПРАВИТЬ</strong>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="registration__figure">
+                  <picture>
+                    <source
+                      media="(min-width: 3840px)"
+                      srcset="images/register-img_x2.webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="images/register-img_x2.webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/register-img_x1.5.webp"
+                    />
+                    <img
+                      src="images/register-img.webp"
+                      alt="Персонаж"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
               </div>
             </div>
           </div>
