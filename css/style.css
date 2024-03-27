@@ -809,6 +809,7 @@ section [class*=__container] {
   .header__container {
     min-height: 600px;
     max-height: 650px;
+    max-width: 480px;
   }
   .header__container::after {
     content: none;
@@ -818,6 +819,7 @@ section [class*=__container] {
   .header__container {
     min-height: 600px;
     max-height: 650px;
+    max-width: 768px;
   }
 }
 @media (min-width: 1024px) {
