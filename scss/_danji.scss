@@ -8,7 +8,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    min-height: 580px;
+    min-height: 586px;
+    @media (min-width: 480px) {
+      min-height: 630px;
+    }
+
     @media (min-width: 768px) {
       min-height: auto;
     }
@@ -24,7 +28,7 @@
 
   &__img {
     position: absolute;
-    top: -50px;
+    top: -35px;
     left: 50%;
     transform: translate(-50%);
     aspect-ratio: 273/356;
@@ -90,7 +94,7 @@
     }
     @media (min-width: 1920px) {
       flex: 0 0 848px;
-       margin-bottom: 200px;
+      margin-bottom: 200px;
     }
     @media (min-width: 3840px) {
       flex: 0 0 1696px;

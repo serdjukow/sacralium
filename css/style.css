@@ -1646,7 +1646,12 @@ section [class*=__container] {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  min-height: 580px;
+  min-height: 586px;
+}
+@media (min-width: 480px) {
+  .danji__container {
+    min-height: 630px;
+  }
 }
 @media (min-width: 768px) {
   .danji__container {
@@ -1655,7 +1660,7 @@ section [class*=__container] {
 }
 .danji__img {
   position: absolute;
-  top: -50px;
+  top: -35px;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -1955,12 +1960,12 @@ section [class*=__container] {
   grid-template-columns: 210px 1fr;
   grid-template-columns: 1fr;
   font-size: 16px;
+  gap: 6px;
 }
 @media (min-width: 480px) {
   .form__feld {
     grid-template-columns: 1fr;
     font-size: 16px;
-    gap: 6px;
   }
 }
 @media (min-width: 768px) {

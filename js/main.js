@@ -47,7 +47,7 @@ const checkTextInInput = () => {
 
 // Переход по нажатию кнопок
 function goTo() {
-  const menuLinks = document.querySelectorAll(".menu__item a");
+  const menuLinks = document.querySelectorAll(".menu-link");
   const headerHeight = document.querySelector("header").offsetHeight;
   if (menuLinks.length > 0) {
     menuLinks.forEach((menuLink, id) => {
@@ -71,7 +71,7 @@ function goTo() {
 goTo();
 
 const sections = document.querySelectorAll(".section");
-const navLinks = document.querySelectorAll(".menu__item a");
+const navLinks = document.querySelectorAll(".menu-link");
 const headerHeight = document.querySelector(".navigation").offsetHeight;
 const baseTitle = document.title;
 let ticking = false;
