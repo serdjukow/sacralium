@@ -4,6 +4,27 @@
   // .registration__container
 
   &__container {
+    padding-top: 30px !important;
+    @media (min-width: 480px) {
+      padding-top: 30px !important;
+    }
+    @media (min-width: 768px) {
+      padding-top: 107px !important;
+    }
+    @media (min-width: 1024px) {
+      padding-top: 85px !important;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 100px !important;
+    }
+    @media (min-width: 1600px) {
+    }
+    @media (min-width: 1920px) {
+      padding-top: 138px !important;
+    }
+    @media (min-width: 3840px) {
+      padding-top: 275px !important;
+    }
   }
 
   &__figure {

@@ -1776,6 +1776,39 @@ section [class*=__container] {
   position: relative;
   z-index: 1;
 }
+.registration__container {
+  padding-top: 30px !important;
+}
+@media (min-width: 480px) {
+  .registration__container {
+    padding-top: 30px !important;
+  }
+}
+@media (min-width: 768px) {
+  .registration__container {
+    padding-top: 107px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .registration__container {
+    padding-top: 85px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .registration__container {
+    padding-top: 100px !important;
+  }
+}
+@media (min-width: 1920px) {
+  .registration__container {
+    padding-top: 138px !important;
+  }
+}
+@media (min-width: 3840px) {
+  .registration__container {
+    padding-top: 275px !important;
+  }
+}
 .registration__figure {
   aspect-ratio: 234/305;
   margin: 0 auto 0 auto;
