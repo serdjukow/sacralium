@@ -1,4 +1,5 @@
 .about {
+  background-color: #0f0f0f;
   // .about__container
 
   &__container {
@@ -82,6 +83,7 @@
 
   &__bg {
     aspect-ratio: 16/9;
+    background-color: #0f0f0f;
     video,
     img {
       width: 100%;
@@ -98,6 +100,7 @@
   // .slider-text__slide
 
   &__slide {
+    background-color: #0f0f0f;
   }
 
   // .slider-text__content

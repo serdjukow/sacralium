@@ -1,6 +1,3 @@
-// import { Swiper, Navigation, Pagination, Parallax, Autoplay } from "swiper";
-// Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
-
 const showHeader = () => {
   const header = document.querySelector(".navigation");
   header.classList.add("show");
@@ -48,7 +45,6 @@ const checkTextInInput = () => {
 // Переход по нажатию кнопок
 function goTo() {
   const menuLinks = document.querySelectorAll(".menu-link");
-  const headerHeight = document.querySelector("header").offsetHeight;
   if (menuLinks.length > 0) {
     menuLinks.forEach((menuLink, id) => {
       menuLink.addEventListener("click", onButtonClick);
@@ -70,13 +66,12 @@ function goTo() {
 }
 goTo();
 
-const sections = document.querySelectorAll(".section");
-const navLinks = document.querySelectorAll(".menu-link");
-const headerHeight = document.querySelector(".navigation").offsetHeight;
+// Подсвечиваем активный пункт меню
 const baseTitle = document.title;
-let ticking = false;
-
 function highlightNavLink() {
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll(".menu-link");
+  let ticking = false;
   if (!ticking) {
     window.requestAnimationFrame(() => {
       let fromTop = window.scrollY + 60; // Дополнительное смещение, если нужно
@@ -104,23 +99,10 @@ function highlightNavLink() {
     ticking = true;
   }
 }
-
+highlightNavLink();
 window.addEventListener("scroll", (e) => {
   highlightNavLink(e);
-  document.body.style.cssText += `--scrollTop: ${this.scrollY}px`;
 });
-
-// Активный пункт меню при загрузке страницы
-const activeSection = localStorage.getItem("activeSection");
-if (activeSection) {
-  navLinks.forEach((link) => {
-    if (activeSection === link.getAttribute("href").substring(1)) {
-      link.classList.add("active");
-    }
-  });
-}
-
-highlightNavLink();
 
 const toggleBurgerActive = () => {
   const menuButton = document.querySelector("#nav-icon");
@@ -148,3 +130,10 @@ const toggleBurgerActive = () => {
   };
 };
 toggleBurgerActive();
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}

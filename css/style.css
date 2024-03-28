@@ -467,6 +467,9 @@ section [class*=__container] {
     max-width: 3245px;
   }
 }
+.navigation__logo {
+  cursor: pointer;
+}
 .navigation__logo img {
   width: 100%;
   height: 100%;
@@ -785,6 +788,7 @@ section [class*=__container] {
   background-image: url(../images/home-bg.webp);
   background-size: cover;
   background-position: center;
+  background-color: #0f0f0f;
   overflow: hidden;
 }
 .header__container {
@@ -1085,6 +1089,9 @@ section [class*=__container] {
   }
 }
 
+.about {
+  background-color: #0f0f0f;
+}
 .about__sliders {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1188,6 +1195,7 @@ section [class*=__container] {
 
 .slider-media__bg {
   aspect-ratio: 16/9;
+  background-color: #0f0f0f;
 }
 .slider-media__bg video,
 .slider-media__bg img {
@@ -1195,6 +1203,9 @@ section [class*=__container] {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.slider-text__slide {
+  background-color: #0f0f0f;
 }
 .slider-text__content {
   min-height: auto;
@@ -1964,7 +1975,7 @@ section [class*=__container] {
     padding-bottom: 108px;
   }
 }
-.form__feds {
+.form__fields {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1975,21 +1986,22 @@ section [class*=__container] {
   gap: 6px;
 }
 @media (min-width: 768px) {
-  .form__feds {
+  .form__fields {
     gap: 21px;
   }
 }
 @media (min-width: 1920px) {
-  .form__feds {
+  .form__fields {
     gap: 25px;
   }
 }
 @media (min-width: 3840px) {
-  .form__feds {
+  .form__fields {
     gap: 50px;
   }
 }
-.form__feld {
+.form__field {
+  position: relative;
   font-family: var(--font-family);
   display: grid;
   grid-template-columns: 210px 1fr;
@@ -1998,40 +2010,40 @@ section [class*=__container] {
   gap: 6px;
 }
 @media (min-width: 480px) {
-  .form__feld {
+  .form__field {
     grid-template-columns: 1fr;
     font-size: 16px;
   }
 }
 @media (min-width: 768px) {
-  .form__feld {
+  .form__field {
     grid-template-columns: 135px 1fr;
     font-size: 20px;
     gap: 30px;
   }
 }
 @media (min-width: 1024px) {
-  .form__feld {
+  .form__field {
     grid-template-columns: 175px 1fr;
     font-size: 24px;
   }
 }
 @media (min-width: 1600px) {
-  .form__feld {
+  .form__field {
     grid-template-columns: 210px 1fr;
     font-size: 30px;
     gap: 37px;
   }
 }
 @media (min-width: 1920px) {
-  .form__feld {
+  .form__field {
     grid-template-columns: 241px 1fr;
     font-size: 36px;
     gap: 60px;
   }
 }
 @media (min-width: 3840px) {
-  .form__feld {
+  .form__field {
     grid-template-columns: 481px 1fr;
     font-size: 72px;
     gap: 120px;
@@ -2048,7 +2060,7 @@ section [class*=__container] {
   background-color: #cccaca;
   cursor: auto;
   border-radius: 6px;
-  border-color: transparent;
+  border: 1px solid transparent;
   font-size: 16px;
   caret-color: #333;
   padding: 6px 10px;
@@ -2058,6 +2070,9 @@ section [class*=__container] {
 }
 .form input:focus {
   outline: none;
+}
+.form input[type=name]:focus + .form__hint {
+  opacity: 1;
 }
 .form input::-moz-placeholder {
   color: #333;
@@ -2105,6 +2120,64 @@ section [class*=__container] {
   .form input {
     font-size: 72px;
   }
+}
+.form__hint {
+  position: absolute;
+  top: -250px;
+  right: 0;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+  font-family: Calibri;
+  color: hsla(38, 25%, 55%, 0.678);
+  border: 0.074vw solid #645e57;
+  background-color: #1b1b1b;
+  -webkit-box-shadow: 0 0.7vw 2.1vw 2vw rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.7vw 2.1vw 2vw rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  opacity: 0;
+  -webkit-transition: var(--elements_transition);
+  transition: var(--elements_transition);
+}
+.form__hint-text {
+  margin-bottom: 20px;
+}
+.form__hint-button {
+  cursor: pointer;
+  color: #fff;
+  padding: 7px 12px;
+  text-transform: uppercase;
+  background-color: #900302;
+  font-size: 17px;
+  opacity: 0.9;
+  border-radius: 4px;
+  -webkit-transition: var(--elements_transition);
+  transition: var(--elements_transition);
+  margin-bottom: 20px;
+}
+.form__hint-button:hover {
+  opacity: 1;
+}
+.form__hint-name {
+  color: #fff;
+  font-size: 27px;
+  cursor: pointer;
+  -webkit-transition: var(--elements_transition);
+  transition: var(--elements_transition);
+}
+.form__hint-name:hover {
+  color: #bdbcbc;
 }
 .form__button-container {
   margin-top: 25px;

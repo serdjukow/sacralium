@@ -14,14 +14,6 @@
       type="image/webp"
       media="(min-width: 1200px)"
     />
-    <!-- <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="./images/character.x1.5.webp"
-      type="image/webp"
-      media="(min-width: 768px)"
-    /> -->
     <link
       rel="preload"
       fetchpriority="high"
@@ -46,7 +38,7 @@
   </head>
   <body class="body">
     <div class="wrapper">
-      <header class="header bg-gray">
+      <header class="header">
         <div class="header__mobile-menu mobile-menu">
           <nav class="mobile-menu__body">
             <ul class="mobile-menu__list">
@@ -81,15 +73,13 @@
                 <span></span>
                 <span></span>
               </div>
-              <a href="/" class="navigation__logo" title="SACRALIUM">
-                <picture>
-                  <source
-                    media="(max-width: 767.98px)"
-                    srcset="images/logo-mobile.webp"
-                  />
-                  <img src="images/logo.webp" alt="SACRALIUM Site Logo" />
-                </picture>
-              </a>
+              <picture class="navigation__logo" onclick="scrollToTop()">
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="images/logo-mobile.webp"
+                />
+                <img src="images/logo.webp" alt="SACRALIUM Site Logo" />
+              </picture>
               <div class="navigation__menu menu">
                 <nav class="menu__body">
                   <ul class="menu__list">
@@ -170,13 +160,13 @@
       </header>
       <main class="page bg-black">
         <div class="border"></div>
-        <section id="about" class="about bg-gray section">
+        <section id="about" class="about section">
           <div class="about__container">
             <div class="about__sliders">
               <div class="about__slider-media slider-media swiper">
                 <div class="swiper-wrapper slider-media__wrapper">
                   <div class="swiper-slide slider-media__slide">
-                    <div class="slider-media__bg bg-gray">
+                    <div class="slider-media__bg">
                       <video
                         autoplay="autoplay"
                         loop="loop"
@@ -203,7 +193,7 @@
 
               <div class="about__slider-text slider-text swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide slider-text__slide bg-gray">
+                  <div class="swiper-slide slider-text__slide">
                     <div class="slider-text__content">
                       <h2 class="slider-text__title title">
                         ГОРОДА И ПУТЕШЕСТВИЯ
@@ -221,7 +211,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide slider-text__slide bg-gray">
+                  <div class="swiper-slide slider-text__slide">
                     <div class="slider-text__content">
                       <h2 class="slider-text__title title">
                         КЛАССЫ И ПРОКАЧКА
@@ -240,7 +230,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide slider-text__slide bg-gray">
+                  <div class="swiper-slide slider-text__slide">
                     <div class="slider-text__content">
                       <h2 class="slider-text__title title">БОЕВАЯ СИСТЕМА</h2>
                       <p class="slider-text__text text">
@@ -414,8 +404,8 @@
                   </div>
 
                   <form id="form" class="registration__form form">
-                    <div class="form__feds">
-                      <div class="form__feld">
+                    <div class="form__fields">
+                      <div class="form__field">
                         <label for="e-mail">E-Mail</label>
                         <input
                           type="email"
@@ -425,7 +415,7 @@
                           required
                         />
                       </div>
-                      <div class="form__feld">
+                      <div class="form__field">
                         <label for="name">Имя персонажа</label>
                         <input
                           type="name"
@@ -434,6 +424,18 @@
                           autocomplete="off"
                           required
                         />
+
+                        <div class="form__hint">
+                          <span class="form__hint-text">
+                            Имя персонажа должно быть длиной от 3 до 20
+                            символов. Может содержать только буквы, цифры,
+                            символы "_" и "-" или пробел.
+                          </span>
+                          <div id="hint-button" class="form__hint-button">
+                            Сгенерировать автоматически?
+                          </div>
+                        </div>
+                        <div id="hint-names" class="form__hint-names show"></div>
                       </div>
                     </div>
                     <div class="form__button-container">
