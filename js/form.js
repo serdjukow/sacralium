@@ -15,9 +15,13 @@ function validateInput() {
   if (regex.test(inputValue)) {
     inputField.style.color = "green";
     inputField.style.borderColor = "green";
+    inputField.validity.valid = true;
+    inputField.setCustomValidity("");
   } else {
     inputField.style.color = "red";
     inputField.style.borderColor = "red";
+    inputField.validity.valid = false;
+    inputField.setCustomValidity("Пожалуйста, введите корректное значение.");
   }
 }
 
@@ -59,8 +63,8 @@ form.addEventListener("submit", (event) => {
   const formObject = {};
   formData.forEach((value, key) => {
     formObject[key] = value;
-  });
+  }); 
   console.log(formObject);
   form.reset();
-  hintButtonContainer.innerHTML = ''
+  hintButtonContainer.innerHTML = "";
 });
