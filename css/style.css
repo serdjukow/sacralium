@@ -2159,12 +2159,12 @@ section [class*=__container] {
   padding: 7px 12px;
   text-transform: uppercase;
   background-color: #900302;
-  font-size: 17px;
+  font-size: 14px;
   opacity: 0.9;
   border-radius: 4px;
   -webkit-transition: var(--elements_transition);
   transition: var(--elements_transition);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .form__hint-button:hover {
   opacity: 1;
