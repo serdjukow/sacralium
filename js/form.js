@@ -2,34 +2,13 @@ const form = document.getElementById("form");
 const getNameLink = "https://forum-dev.sacralium.game/forum/api/get_names";
 const registerLink = "https://forum-dev.sacralium.game/forum/api/register";
 const inputField = document.getElementById("name");
-const hintButton = document.getElementById("hint-button");
-const hintButtonContainer = document.getElementById("hint-names");
-const hintNames = document.querySelectorAll(".form__hint-name");
+const updateNameButton = document.getElementById("update-name");
+const formHint = document.querySelector(".form__hint");
 
 const testLink = "./../data.json";
 
-function validateInput() {
-  const inputValue = inputField.value.trim();
-  const regex = /^[a-zA-Zа-яА-Я0-9_\- ]{3,20}$/;
-
-  if (regex.test(inputValue)) {
-    inputField.style.color = "green";
-    inputField.style.borderColor = "green";
-    inputField.validity.valid = true;
-    inputField.setCustomValidity("");
-  } else {
-    inputField.style.color = "red";
-    inputField.style.borderColor = "red";
-    inputField.validity.valid = false;
-    inputField.setCustomValidity("Пожалуйста, введите корректное значение.");
-  }
-}
-
-inputField.addEventListener("input", () => validateInput());
-
-hintButton.addEventListener("click", () => {
-  getName();
-});
+let names = [];
+let currentIndex = 0;
 
 async function getName() {
   try {
@@ -43,19 +22,50 @@ async function getName() {
       throw new Error("Ошибка HTTP: " + response.status);
     }
     const data = await response.json();
-    hintButtonContainer.innerHTML = nameRender(data.names);
+    names.push(...data.names);
+    inputField.value = names[currentIndex];
+    currentIndex = (currentIndex + 1) % names.length;
+    validateInput();
   } catch (error) {
     console.error("Произошла ошибка:", error.message);
   }
 }
+getName();
 
-hintButtonContainer.addEventListener("click", (e) => {
-  inputField.value = e.target.innerText;
+function changeName() {
+  if (names.length === 0) {
+    getName();
+    return;
+  }
+  inputField.value = names[currentIndex];
+  currentIndex = (currentIndex + 1) % names.length;
+}
+
+function validateInput() {
+  const inputValue = inputField.value.trim();
+  const regex = /^[a-zA-Zа-яА-Я0-9_\- ]{3,20}$/;
+
+  if (regex.test(inputValue)) {
+    inputField.style.color = "green";
+    inputField.style.borderColor = "green";
+    inputField.validity.valid = true;
+    inputField.setCustomValidity("");
+    formHint.classList.remove('active')
+  } else {
+    inputField.style.color = "red";
+    inputField.style.borderColor = "red";
+    inputField.validity.valid = false;
+    inputField.setCustomValidity("Пожалуйста, введите корректное значение.");
+     formHint.classList.add("active");
+  }
+}
+
+inputField.addEventListener("input", () => validateInput());
+
+updateNameButton.addEventListener("click", () => {
+  changeName();
   validateInput();
 });
-
-const nameToHtml = (name) => `<div class="form__hint-name">${name}</div>`;
-const nameRender = (names) => names.map(nameToHtml).join("");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -63,8 +73,10 @@ form.addEventListener("submit", (event) => {
   const formObject = {};
   formData.forEach((value, key) => {
     formObject[key] = value;
-  }); 
+  });
   console.log(formObject);
   form.reset();
-  hintButtonContainer.innerHTML = "";
 });
+
+// https://sacralium.vercel.app/
+// https://rc.sacralium.game/new-character
