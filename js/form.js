@@ -29,7 +29,12 @@ hintButton.addEventListener("click", () => {
 
 async function getName() {
   try {
-    const response = await fetch(getNameLink, {});
+    const response = await fetch(testLink, {
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     if (!response.ok) {
       throw new Error("Ошибка HTTP: " + response.status);
     }
@@ -57,5 +62,5 @@ form.addEventListener("submit", (event) => {
   });
   console.log(formObject);
   form.reset();
-  hintButtonContainer.innerHTML = "";
+  hintButtonContainer.innerHTML = ''
 });
